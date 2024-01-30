@@ -1,0 +1,204 @@
+﻿Build1=Default,b4a.example
+File1=biblio_login.jpg
+File10=Montserrat-ExtraBold.ttf
+File11=Montserrat-ExtraBoldItalic.ttf
+File12=Montserrat-ExtraLight.ttf
+File13=Montserrat-ExtraLightItalic.ttf
+File14=Montserrat-Italic.ttf
+File15=Montserrat-Light.ttf
+File16=Montserrat-LightItalic.ttf
+File17=Montserrat-Medium.ttf
+File18=Montserrat-MediumItalic.ttf
+File19=Montserrat-Regular.ttf
+File2=Layout.bal
+File20=Montserrat-SemiBold.ttf
+File21=Montserrat-SemiBoldItalic.ttf
+File22=Montserrat-Thin.ttf
+File23=Montserrat-ThinItalic.ttf
+File24=Quicksand-Bold.ttf
+File25=Quicksand-Light.ttf
+File26=Quicksand-Medium.ttf
+File27=Quicksand-Regular.ttf
+File28=Quicksand-SemiBold.ttf
+File29=RobotoSlab-Black.ttf
+File3=layoutPaginaPrincipal.bal
+File30=RobotoSlab-Bold.ttf
+File31=RobotoSlab-ExtraBold.ttf
+File32=RobotoSlab-ExtraLight.ttf
+File33=RobotoSlab-Light.ttf
+File34=RobotoSlab-Medium.ttf
+File35=RobotoSlab-Regular.ttf
+File36=RobotoSlab-SemiBold.ttf
+File37=RobotoSlab-Thin.ttf
+File4=layoutRegistroUsuario.bal
+File5=layoutValidacionUsuario.bal
+File6=Montserrat-Black.ttf
+File7=Montserrat-BlackItalic.ttf
+File8=Montserrat-Bold.ttf
+File9=Montserrat-BoldItalic.ttf
+FileGroup1=Default Group
+FileGroup10=Default Group
+FileGroup11=Default Group
+FileGroup12=Default Group
+FileGroup13=Default Group
+FileGroup14=Default Group
+FileGroup15=Default Group
+FileGroup16=Default Group
+FileGroup17=Default Group
+FileGroup18=Default Group
+FileGroup19=Default Group
+FileGroup2=Default Group
+FileGroup20=Default Group
+FileGroup21=Default Group
+FileGroup22=Default Group
+FileGroup23=Default Group
+FileGroup24=Default Group
+FileGroup25=Default Group
+FileGroup26=Default Group
+FileGroup27=Default Group
+FileGroup28=Default Group
+FileGroup29=Default Group
+FileGroup3=Default Group
+FileGroup30=Default Group
+FileGroup31=Default Group
+FileGroup32=Default Group
+FileGroup33=Default Group
+FileGroup34=Default Group
+FileGroup35=Default Group
+FileGroup36=Default Group
+FileGroup37=Default Group
+FileGroup4=Default Group
+FileGroup5=Default Group
+FileGroup6=Default Group
+FileGroup7=Default Group
+FileGroup8=Default Group
+FileGroup9=Default Group
+Group=Default Group
+Library1=b4xdrawer
+Library10=xui
+Library11=animation
+Library2=core
+Library3=dateutils
+Library4=javaobject
+Library5=json
+Library6=network
+Library7=okhttp
+Library8=okhttputils2
+Library9=viewsex
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="33"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~CreateResourceFromFile(Macro, Themes.LightTheme)~\n~'End of default text.~\n~
+Module1=login
+Module2=Principal
+Module3=RegistroUsuario
+Module4=SlideMenu
+Module5=Starter
+Module6=usuario
+Module7=validacionCodigoUsuario
+Module8=ValidacionUsuario
+NumberOfFiles=37
+NumberOfLibraries=11
+NumberOfModules=8
+Version=12.8
+@EndOfDesignText@
+#Region  Project Attributes 
+	#ApplicationLabel: B4A Example
+	#VersionCode: 1
+	#VersionName: 
+	'SupportedOrientations possible values: unspecified, landscape or portrait.
+	#SupportedOrientations: unspecified
+	#CanInstallToExternalStorage: False
+#End Region
+
+#Region  Activity Attributes 
+	#FullScreen: False
+	#IncludeTitle: True
+#End Region
+
+Sub Process_Globals
+	'These global variables will be declared once when the application starts.
+	'These variables can be accessed from all modules.
+	Private xui As XUI
+End Sub
+
+Sub Globals
+	'These global variables will be redeclared each time the activity is created.
+	Private txt_usuario As EditText
+	Private txt_contrasenia As EditText
+End Sub
+
+Sub Activity_Create(FirstTime As Boolean)
+	Activity.LoadLayout("Layout")
+End Sub
+
+Sub Activity_Resume
+
+End Sub
+
+Sub Activity_Pause (UserClosed As Boolean)
+
+End Sub
+
+Private Sub btnIniciarSesion_Click
+	Dim usuario_ As String
+	usuario_ = txt_usuario.Text
+
+	If usuario_ = "" Then
+		xui.MsgboxAsync("¡El usuario no puede estar vacío!", "Error")
+		Return
+	End If
+	If usuario_.Length > 20 Then
+		xui.MsgboxAsync("¡El usuario no puede contener más de 20 caracteres!", "Error")
+		Return
+	End If
+
+	Dim contrasenia As String
+	contrasenia = txt_contrasenia.Text
+
+	If contrasenia = "" Then
+		xui.MsgboxAsync("¡La contraseña no puede estar vacía!", "Error")
+		Return
+	End If
+	If contrasenia.Length > 15 Then
+		xui.MsgboxAsync("¡La contraseña no puede contener más de 15 caracteres!", "Error")
+		Return
+	End If
+	
+	Dim mapLogin As Map
+	Dim jsonLogin As String
+	Dim jsonGenerator As JSONGenerator
+	Dim login_ As login
+	
+	login_.usr_nickname = usuario_
+	login_.usr_contrasenia = contrasenia
+	
+	mapLogin.Initialize
+	mapLogin.Put("usr_nickname", login_.usr_nickname)
+	mapLogin.Put("usr_contrasenia", login_.usr_contrasenia)
+	
+	jsonGenerator.Initialize(mapLogin)
+	jsonLogin = jsonGenerator.ToPrettyString(5)
+	
+	Dim peticion As HttpJob
+	peticion.Initialize("", Me)
+	peticion.PostString("https://biblioteca-3q4a.onrender.com/api/auth/login", jsonLogin)
+	peticion.GetRequest.SetContentType("application/json")
+	
+	Wait For (peticion) JobDone (respuesta As HttpJob)
+	
+	If respuesta.Success Then
+		Dim mensaje_usuario As Object = xui.Msgbox2Async("¡Login exitoso!.", "SUCCESS", "Aceptar", "", "", Null)
+		Wait For (mensaje_usuario) Msgbox_Result (Result As Int)
+		If Result = xui.DialogResponse_Positive Then
+			peticion.Release
+			StartActivity("Principal")
+		End If
+	Else
+		xui.MsgboxAsync("¡Login fallido!", "ERROR")
+	End If
+	peticion.Release
+	
+End Sub
+
+
+Private Sub btn_registro_Click
+	StartActivity("RegistroUsuario")
+End Sub

@@ -1,0 +1,69 @@
+--release
+--output
+D:\Documentos\universidad\mobile-apps\proyecto integrador\administracion_biblioteca\Objects
+--lib
+C:\Android\platforms\android-33\android.jar
+C:\Android\tools\..\extras\b4a_local\unpacked-b4ashared-63837495756000\dex_v1\b4ashared.zip
+C:\Android\tools\..\extras\b4a_local\unpacked-debug-63837495758000\dex_v1\debug.zip
+C:\Android\tools\..\extras\b4a_local\unpacked-core-63837495758000\dex_v1\core.zip
+C:\Android\tools\..\extras\b4a_local\unpacked-dateutils-63837495758000\dex_v1\dateutils.zip
+C:\Android\tools\..\extras\b4a_local\unpacked-javaobject-63837495758000\dex_v1\javaobject.zip
+C:\Android\tools\..\extras\b4a_local\unpacked-json-63837495758000\dex_v1\json.zip
+C:\Android\tools\..\extras\b4a_local\unpacked-network-63837495758000\dex_v1\network.zip
+C:\Android\tools\..\extras\b4a_local\unpacked-okhttp-63837495758000\dex_v1\okhttp.zip
+C:\Android\tools\..\extras\b4a_local\unpacked-viewsex-63837495758000\dex_v1\viewsex.zip
+C:\Android\tools\..\extras\b4a_local\unpacked-xui-63837495758000\dex_v1\xui.zip
+C:\Android\tools\..\extras\b4a_local\unpacked-animation-63837495756000\dex_v1\animation.zip
+C:\Android\tools\..\extras\b4a_local\unpacked-okhttp-4.9.0-63837495758000\dex_v1\okhttp-4.9.0.zip
+C:\Android\tools\..\extras\b4a_local\unpacked-okio-2.8.0-63837495758000\dex_v1\okio-2.8.0.zip
+C:\Android\tools\..\extras\b4a_local\unpacked-okhttp-urlconnection-4.9.3-63837495758000\dex_v1\okhttp-urlconnection-4.9.3.zip
+C:\Android\tools\..\extras\b4a_local\unpacked-kotlin-stdlib-1.6.10-63837495758000\dex_v1\kotlin-stdlib-1.6.10.zip
+C:\Android\tools\..\extras\b4a_local\unpacked-stringutils-63837495758000\dex_v1\stringutils.zip
+C:\Android\tools\..\extras\b4a_local\unpacked-remotelogger-63837495758000\dex_v1\remotelogger.zip
+D:\Documentos\universidad\mobile-apps\proyecto integrador\administracion_biblioteca\Objects\dexed\b4a\example\b4xdrawer.dex
+D:\Documentos\universidad\mobile-apps\proyecto integrador\administracion_biblioteca\Objects\dexed\b4a\example\httpjob$_multipartfiledata.dex
+D:\Documentos\universidad\mobile-apps\proyecto integrador\administracion_biblioteca\Objects\dexed\b4a\example\httpjob.dex
+D:\Documentos\universidad\mobile-apps\proyecto integrador\administracion_biblioteca\Objects\dexed\b4a\example\httputils2service.dex
+D:\Documentos\universidad\mobile-apps\proyecto integrador\administracion_biblioteca\Objects\dexed\b4a\example\login.dex
+D:\Documentos\universidad\mobile-apps\proyecto integrador\administracion_biblioteca\Objects\dexed\b4a\example\main$1.dex
+D:\Documentos\universidad\mobile-apps\proyecto integrador\administracion_biblioteca\Objects\dexed\b4a\example\main$B4AMenuItemsClickListener.dex
+D:\Documentos\universidad\mobile-apps\proyecto integrador\administracion_biblioteca\Objects\dexed\b4a\example\main$HandleKeyDelayed.dex
+D:\Documentos\universidad\mobile-apps\proyecto integrador\administracion_biblioteca\Objects\dexed\b4a\example\main$ResumableSub_btnIniciarSesion_Click.dex
+D:\Documentos\universidad\mobile-apps\proyecto integrador\administracion_biblioteca\Objects\dexed\b4a\example\main$ResumeMessage.dex
+D:\Documentos\universidad\mobile-apps\proyecto integrador\administracion_biblioteca\Objects\dexed\b4a\example\main$WaitForLayout.dex
+D:\Documentos\universidad\mobile-apps\proyecto integrador\administracion_biblioteca\Objects\dexed\b4a\example\main.dex
+D:\Documentos\universidad\mobile-apps\proyecto integrador\administracion_biblioteca\Objects\dexed\b4a\example\principal$1.dex
+D:\Documentos\universidad\mobile-apps\proyecto integrador\administracion_biblioteca\Objects\dexed\b4a\example\principal$B4AMenuItemsClickListener.dex
+D:\Documentos\universidad\mobile-apps\proyecto integrador\administracion_biblioteca\Objects\dexed\b4a\example\principal$HandleKeyDelayed.dex
+D:\Documentos\universidad\mobile-apps\proyecto integrador\administracion_biblioteca\Objects\dexed\b4a\example\principal$ResumeMessage.dex
+D:\Documentos\universidad\mobile-apps\proyecto integrador\administracion_biblioteca\Objects\dexed\b4a\example\principal$WaitForLayout.dex
+D:\Documentos\universidad\mobile-apps\proyecto integrador\administracion_biblioteca\Objects\dexed\b4a\example\principal.dex
+D:\Documentos\universidad\mobile-apps\proyecto integrador\administracion_biblioteca\Objects\dexed\b4a\example\R$drawable.dex
+D:\Documentos\universidad\mobile-apps\proyecto integrador\administracion_biblioteca\Objects\dexed\b4a\example\R$style.dex
+D:\Documentos\universidad\mobile-apps\proyecto integrador\administracion_biblioteca\Objects\dexed\b4a\example\R.dex
+D:\Documentos\universidad\mobile-apps\proyecto integrador\administracion_biblioteca\Objects\dexed\b4a\example\registrousuario$1.dex
+D:\Documentos\universidad\mobile-apps\proyecto integrador\administracion_biblioteca\Objects\dexed\b4a\example\registrousuario$B4AMenuItemsClickListener.dex
+D:\Documentos\universidad\mobile-apps\proyecto integrador\administracion_biblioteca\Objects\dexed\b4a\example\registrousuario$HandleKeyDelayed.dex
+D:\Documentos\universidad\mobile-apps\proyecto integrador\administracion_biblioteca\Objects\dexed\b4a\example\registrousuario$ResumableSub_btn_registrar_usuario_Click.dex
+D:\Documentos\universidad\mobile-apps\proyecto integrador\administracion_biblioteca\Objects\dexed\b4a\example\registrousuario$ResumeMessage.dex
+D:\Documentos\universidad\mobile-apps\proyecto integrador\administracion_biblioteca\Objects\dexed\b4a\example\registrousuario$WaitForLayout.dex
+D:\Documentos\universidad\mobile-apps\proyecto integrador\administracion_biblioteca\Objects\dexed\b4a\example\registrousuario.dex
+D:\Documentos\universidad\mobile-apps\proyecto integrador\administracion_biblioteca\Objects\dexed\b4a\example\slidemenu$_actionitem.dex
+D:\Documentos\universidad\mobile-apps\proyecto integrador\administracion_biblioteca\Objects\dexed\b4a\example\slidemenu.dex
+D:\Documentos\universidad\mobile-apps\proyecto integrador\administracion_biblioteca\Objects\dexed\b4a\example\starter$1.dex
+D:\Documentos\universidad\mobile-apps\proyecto integrador\administracion_biblioteca\Objects\dexed\b4a\example\starter$2.dex
+D:\Documentos\universidad\mobile-apps\proyecto integrador\administracion_biblioteca\Objects\dexed\b4a\example\starter$starter_BR.dex
+D:\Documentos\universidad\mobile-apps\proyecto integrador\administracion_biblioteca\Objects\dexed\b4a\example\starter.dex
+D:\Documentos\universidad\mobile-apps\proyecto integrador\administracion_biblioteca\Objects\dexed\b4a\example\usuario.dex
+D:\Documentos\universidad\mobile-apps\proyecto integrador\administracion_biblioteca\Objects\dexed\b4a\example\validacioncodigousuario.dex
+D:\Documentos\universidad\mobile-apps\proyecto integrador\administracion_biblioteca\Objects\dexed\b4a\example\validacionusuario$1.dex
+D:\Documentos\universidad\mobile-apps\proyecto integrador\administracion_biblioteca\Objects\dexed\b4a\example\validacionusuario$B4AMenuItemsClickListener.dex
+D:\Documentos\universidad\mobile-apps\proyecto integrador\administracion_biblioteca\Objects\dexed\b4a\example\validacionusuario$HandleKeyDelayed.dex
+D:\Documentos\universidad\mobile-apps\proyecto integrador\administracion_biblioteca\Objects\dexed\b4a\example\validacionusuario$ResumableSub_btn_validar_usuario_Click.dex
+D:\Documentos\universidad\mobile-apps\proyecto integrador\administracion_biblioteca\Objects\dexed\b4a\example\validacionusuario$ResumeMessage.dex
+D:\Documentos\universidad\mobile-apps\proyecto integrador\administracion_biblioteca\Objects\dexed\b4a\example\validacionusuario$WaitForLayout.dex
+D:\Documentos\universidad\mobile-apps\proyecto integrador\administracion_biblioteca\Objects\dexed\b4a\example\validacionusuario.dex
+D:\Documentos\universidad\mobile-apps\proyecto integrador\administracion_biblioteca\Objects\dexed\b4a\example\designerscripts\LS_layout.dex
+D:\Documentos\universidad\mobile-apps\proyecto integrador\administracion_biblioteca\Objects\dexed\b4a\example\designerscripts\LS_layoutpaginaprincipal.dex
+D:\Documentos\universidad\mobile-apps\proyecto integrador\administracion_biblioteca\Objects\dexed\b4a\example\designerscripts\LS_layoutregistrousuario.dex
+D:\Documentos\universidad\mobile-apps\proyecto integrador\administracion_biblioteca\Objects\dexed\b4a\example\designerscripts\LS_layoutvalidacionusuario.dex
