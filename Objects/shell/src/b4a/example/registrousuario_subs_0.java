@@ -8,7 +8,7 @@ public class registrousuario_subs_0 {
 
 public static RemoteObject  _activity_create(RemoteObject _firsttime) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Create (registrousuario) ","registrousuario",1,registrousuario.mostCurrent.activityBA,registrousuario.mostCurrent,27);
+		Debug.PushSubsStack("Activity_Create (registrousuario) ","registrousuario",3,registrousuario.mostCurrent.activityBA,registrousuario.mostCurrent,27);
 if (RapidSub.canDelegate("activity_create")) { return b4a.example.registrousuario.remoteMe.runUserSub(false, "registrousuario","activity_create", _firsttime);}
 Debug.locals.put("FirstTime", _firsttime);
  BA.debugLineNum = 27;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
@@ -28,7 +28,7 @@ finally {
 		}}
 public static RemoteObject  _activity_pause(RemoteObject _userclosed) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Pause (registrousuario) ","registrousuario",1,registrousuario.mostCurrent.activityBA,registrousuario.mostCurrent,37);
+		Debug.PushSubsStack("Activity_Pause (registrousuario) ","registrousuario",3,registrousuario.mostCurrent.activityBA,registrousuario.mostCurrent,37);
 if (RapidSub.canDelegate("activity_pause")) { return b4a.example.registrousuario.remoteMe.runUserSub(false, "registrousuario","activity_pause", _userclosed);}
 Debug.locals.put("UserClosed", _userclosed);
  BA.debugLineNum = 37;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
@@ -45,7 +45,7 @@ finally {
 		}}
 public static RemoteObject  _activity_resume() throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Resume (registrousuario) ","registrousuario",1,registrousuario.mostCurrent.activityBA,registrousuario.mostCurrent,33);
+		Debug.PushSubsStack("Activity_Resume (registrousuario) ","registrousuario",3,registrousuario.mostCurrent.activityBA,registrousuario.mostCurrent,33);
 if (RapidSub.canDelegate("activity_resume")) { return b4a.example.registrousuario.remoteMe.runUserSub(false, "registrousuario","activity_resume");}
  BA.debugLineNum = 33;BA.debugLine="Sub Activity_Resume";
 Debug.ShouldStop(1);
@@ -61,7 +61,7 @@ finally {
 		}}
 public static RemoteObject  _btn_calendario_fecha_nacimiento_click() throws Exception{
 try {
-		Debug.PushSubsStack("btn_calendario_fecha_nacimiento_Click (registrousuario) ","registrousuario",1,registrousuario.mostCurrent.activityBA,registrousuario.mostCurrent,41);
+		Debug.PushSubsStack("btn_calendario_fecha_nacimiento_Click (registrousuario) ","registrousuario",3,registrousuario.mostCurrent.activityBA,registrousuario.mostCurrent,41);
 if (RapidSub.canDelegate("btn_calendario_fecha_nacimiento_click")) { return b4a.example.registrousuario.remoteMe.runUserSub(false, "registrousuario","btn_calendario_fecha_nacimiento_click");}
  BA.debugLineNum = 41;BA.debugLine="Private Sub btn_calendario_fecha_nacimiento_Click";
 Debug.ShouldStop(256);
@@ -77,7 +77,7 @@ finally {
 		}}
 public static RemoteObject  _btn_iniciar_sesion_click() throws Exception{
 try {
-		Debug.PushSubsStack("btn_iniciar_sesion_Click (registrousuario) ","registrousuario",1,registrousuario.mostCurrent.activityBA,registrousuario.mostCurrent,182);
+		Debug.PushSubsStack("btn_iniciar_sesion_Click (registrousuario) ","registrousuario",3,registrousuario.mostCurrent.activityBA,registrousuario.mostCurrent,182);
 if (RapidSub.canDelegate("btn_iniciar_sesion_click")) { return b4a.example.registrousuario.remoteMe.runUserSub(false, "registrousuario","btn_iniciar_sesion_click");}
  BA.debugLineNum = 182;BA.debugLine="Private Sub btn_iniciar_sesion_Click";
 Debug.ShouldStop(2097152);
@@ -96,7 +96,7 @@ finally {
 		}}
 public static void  _btn_registrar_usuario_click() throws Exception{
 try {
-		Debug.PushSubsStack("btn_registrar_usuario_Click (registrousuario) ","registrousuario",1,registrousuario.mostCurrent.activityBA,registrousuario.mostCurrent,45);
+		Debug.PushSubsStack("btn_registrar_usuario_Click (registrousuario) ","registrousuario",3,registrousuario.mostCurrent.activityBA,registrousuario.mostCurrent,45);
 if (RapidSub.canDelegate("btn_registrar_usuario_click")) { b4a.example.registrousuario.remoteMe.runUserSub(false, "registrousuario","btn_registrar_usuario_click"); return;}
 ResumableSub_btn_registrar_usuario_Click rsub = new ResumableSub_btn_registrar_usuario_Click(null);
 rsub.resume(null, null);
@@ -123,7 +123,7 @@ RemoteObject _respuesta = RemoteObject.declareNull("b4a.example.httpjob");
 @Override
 public void resume(BA ba, RemoteObject result) throws Exception{
 try {
-		Debug.PushSubsStack("btn_registrar_usuario_Click (registrousuario) ","registrousuario",1,registrousuario.mostCurrent.activityBA,registrousuario.mostCurrent,45);
+		Debug.PushSubsStack("btn_registrar_usuario_Click (registrousuario) ","registrousuario",3,registrousuario.mostCurrent.activityBA,registrousuario.mostCurrent,45);
 Debug.locals = rsLocals;Debug.currentSubFrame.locals = rsLocals;
 
     while (true) {

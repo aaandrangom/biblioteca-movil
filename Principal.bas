@@ -29,15 +29,13 @@ Sub Activity_Create(FirstTime As Boolean)
 	
 	sm.Initialize(Activity, Me, "SlideMenu", 60dip, 225dip)
 
-	sm.AddItem("Item #1", Null, 1)
-	sm.AddItem("Item #2", Null, 2)
-	sm.AddItem("Item #3", Null, 3)
-	sm.AddItem("Item #4", Null, 4)
-	sm.AddItem("Item #5", Null, 5)
-	sm.AddItem("Item #6", Null, 6)
-	sm.AddItem("Item #7", Null, 7)
+	sm.AddItem("Gestionar Pedidos", Null, 1)
+	sm.AddItem("Realizar Pedido", Null, 2)
+	sm.AddItem("Informes", Null, 3)
+	sm.AddItem("Cerrar Sesión", Null, 4)
 	'sm.AddItem("Item #4", LoadBitmap(File.DirAssets, "wrench.png"), 4)'
 	'sm.AddItem("Item #5", LoadBitmap(File.DirAssets, "wrench_orange.png"), 5)'
+
 End Sub
 
 Sub Activity_Resume
@@ -74,6 +72,20 @@ End Sub
 
 'Event sub which is called when an item in the slidemenu is clicked
 Sub SlideMenu_Click(Item As Object)
+	Select Item
+		Case 1
+			xui.MsgboxAsync("¡Modulo en mantenimiento! Volveremos pronto", "OK")
+		Case 2
+			xui.MsgboxAsync("¡Modulo en mantenimiento! Volveremos pronto", "OK")
+		Case 3
+			xui.MsgboxAsync("¡Modulo en mantenimiento! Volveremos pronto", "OK")
+		Case 4
+			Dim mensaje_usuario As Object = xui.Msgbox2Async("¿Desea cerrar sesión?", "GetOut", "Aceptar", "Cancelar", "", Null)
+			Wait For (mensaje_usuario) Msgbox_Result (Result As Int)
+			If Result = xui.DialogResponse_Positive Then
+				StartActivity("Main")
+			End If
+	End Select
 	ToastMessageShow("Item clicked: " & Item, False)
 End Sub
 

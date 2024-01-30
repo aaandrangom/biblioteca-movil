@@ -59,9 +59,9 @@ public static RemoteObject _xui = RemoteObject.declareNull("anywheresoftware.b4a
 public static RemoteObject _sm = RemoteObject.declareNull("b4a.example.slidemenu");
 public static RemoteObject _dateutils = RemoteObject.declareNull("b4a.example.dateutils");
 public static b4a.example.main _main = null;
+public static b4a.example.starter _starter = null;
 public static b4a.example.registrousuario _registrousuario = null;
 public static b4a.example.validacionusuario _validacionusuario = null;
-public static b4a.example.starter _starter = null;
 public static b4a.example.httputils2service _httputils2service = null;
   public Object[] GetGlobals() {
 		return new Object[] {"Activity",principal.mostCurrent._activity,"DateUtils",principal.mostCurrent._dateutils,"HttpUtils2Service",Debug.moduleToString(b4a.example.httputils2service.class),"Main",Debug.moduleToString(b4a.example.main.class),"RegistroUsuario",Debug.moduleToString(b4a.example.registrousuario.class),"sm",principal.mostCurrent._sm,"Starter",Debug.moduleToString(b4a.example.starter.class),"ValidacionUsuario",Debug.moduleToString(b4a.example.validacionusuario.class),"xui",principal.mostCurrent._xui};

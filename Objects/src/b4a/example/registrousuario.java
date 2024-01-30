@@ -34,7 +34,7 @@ public class registrousuario extends Activity implements B4AActivity{
 		super.onCreate(savedInstanceState);
         mostCurrent = this;
 		if (processBA == null) {
-			processBA = new anywheresoftware.b4a.ShellBA(this.getApplicationContext(), null, null, "b4a.example", "b4a.example.registrousuario");
+			processBA = new BA(this.getApplicationContext(), null, null, "b4a.example", "b4a.example.registrousuario");
 			processBA.loadHtSubs(this.getClass());
 	        float deviceScale = getApplicationContext().getResources().getDisplayMetrics().density;
 	        BALayout.setDeviceScale(deviceScale);
@@ -335,15 +335,6 @@ public class registrousuario extends Activity implements B4AActivity{
             
     }
 
-
-
-public static void initializeProcessGlobals() {
-             try {
-                Class.forName(BA.applicationContext.getPackageName() + ".main").getMethod("initializeProcessGlobals").invoke(null, null);
-            } catch (Exception e) {
-                throw new RuntimeException(e);
-            }
-}
 public anywheresoftware.b4a.keywords.Common __c = null;
 public static anywheresoftware.b4a.objects.B4XViewWrapper.XUI _xui = null;
 public static String _usr_email_global = "";
@@ -362,64 +353,44 @@ public b4a.example.validacionusuario _validacionusuario = null;
 public b4a.example.principal _principal = null;
 public b4a.example.starter _starter = null;
 public b4a.example.httputils2service _httputils2service = null;
+
+public static void initializeProcessGlobals() {
+             try {
+                Class.forName(BA.applicationContext.getPackageName() + ".main").getMethod("initializeProcessGlobals").invoke(null, null);
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+}
 public static String  _activity_create(boolean _firsttime) throws Exception{
-RDebugUtils.currentModule="registrousuario";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_create", new Object[] {_firsttime}));}
-RDebugUtils.currentLine=589824;
- //BA.debugLineNum = 589824;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
-RDebugUtils.currentLine=589827;
- //BA.debugLineNum = 589827;BA.debugLine="Activity.LoadLayout(\"layoutRegistroUsuario\")";
+ //BA.debugLineNum = 27;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
+ //BA.debugLineNum = 30;BA.debugLine="Activity.LoadLayout(\"layoutRegistroUsuario\")";
 mostCurrent._activity.LoadLayout("layoutRegistroUsuario",mostCurrent.activityBA);
-RDebugUtils.currentLine=589828;
- //BA.debugLineNum = 589828;BA.debugLine="End Sub";
+ //BA.debugLineNum = 31;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
-RDebugUtils.currentModule="registrousuario";
-RDebugUtils.currentLine=720896;
- //BA.debugLineNum = 720896;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
-RDebugUtils.currentLine=720898;
- //BA.debugLineNum = 720898;BA.debugLine="End Sub";
+ //BA.debugLineNum = 37;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+ //BA.debugLineNum = 39;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_resume() throws Exception{
-RDebugUtils.currentModule="registrousuario";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_resume", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_resume", null));}
-RDebugUtils.currentLine=655360;
- //BA.debugLineNum = 655360;BA.debugLine="Sub Activity_Resume";
-RDebugUtils.currentLine=655362;
- //BA.debugLineNum = 655362;BA.debugLine="End Sub";
+ //BA.debugLineNum = 33;BA.debugLine="Sub Activity_Resume";
+ //BA.debugLineNum = 35;BA.debugLine="End Sub";
 return "";
 }
 public static String  _btn_calendario_fecha_nacimiento_click() throws Exception{
-RDebugUtils.currentModule="registrousuario";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "btn_calendario_fecha_nacimiento_click", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "btn_calendario_fecha_nacimiento_click", null));}
-RDebugUtils.currentLine=786432;
- //BA.debugLineNum = 786432;BA.debugLine="Private Sub btn_calendario_fecha_nacimiento_Click";
-RDebugUtils.currentLine=786434;
- //BA.debugLineNum = 786434;BA.debugLine="End Sub";
+ //BA.debugLineNum = 41;BA.debugLine="Private Sub btn_calendario_fecha_nacimiento_Click";
+ //BA.debugLineNum = 43;BA.debugLine="End Sub";
 return "";
 }
 public static String  _btn_iniciar_sesion_click() throws Exception{
-RDebugUtils.currentModule="registrousuario";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "btn_iniciar_sesion_click", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "btn_iniciar_sesion_click", null));}
-RDebugUtils.currentLine=917504;
- //BA.debugLineNum = 917504;BA.debugLine="Private Sub btn_iniciar_sesion_Click";
-RDebugUtils.currentLine=917505;
- //BA.debugLineNum = 917505;BA.debugLine="StartActivity(\"Main\")";
+ //BA.debugLineNum = 182;BA.debugLine="Private Sub btn_iniciar_sesion_Click";
+ //BA.debugLineNum = 183;BA.debugLine="StartActivity(\"Main\")";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)("Main"));
-RDebugUtils.currentLine=917506;
- //BA.debugLineNum = 917506;BA.debugLine="End Sub";
+ //BA.debugLineNum = 184;BA.debugLine="End Sub";
 return "";
 }
 public static void  _btn_registrar_usuario_click() throws Exception{
-RDebugUtils.currentModule="registrousuario";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "btn_registrar_usuario_click", false))
-	 {Debug.delegate(mostCurrent.activityBA, "btn_registrar_usuario_click", null); return;}
 ResumableSub_btn_registrar_usuario_Click rsub = new ResumableSub_btn_registrar_usuario_Click(null);
 rsub.resume(processBA, null);
 }
@@ -437,7 +408,6 @@ b4a.example.httpjob _respuesta = null;
 
 @Override
 public void resume(BA ba, Object[] result) throws Exception{
-RDebugUtils.currentModule="registrousuario";
 
     while (true) {
         switch (state) {
@@ -447,8 +417,7 @@ return;
 case 0:
 //C
 this.state = 1;
-RDebugUtils.currentLine=851970;
- //BA.debugLineNum = 851970;BA.debugLine="If txt_cedula.Text = \"\" Then";
+ //BA.debugLineNum = 47;BA.debugLine="If txt_cedula.Text = \"\" Then";
 if (true) break;
 
 case 1:
@@ -461,16 +430,13 @@ this.state = 3;
 case 3:
 //C
 this.state = 4;
-RDebugUtils.currentLine=851971;
- //BA.debugLineNum = 851971;BA.debugLine="xui.MsgboxAsync(\"El campo 'Cédula' no puede esta";
+ //BA.debugLineNum = 48;BA.debugLine="xui.MsgboxAsync(\"El campo 'Cédula' no puede esta";
 parent._xui.MsgboxAsync(processBA,BA.ObjectToCharSequence("El campo 'Cédula' no puede estar vacío."),BA.ObjectToCharSequence("Error"));
-RDebugUtils.currentLine=851972;
- //BA.debugLineNum = 851972;BA.debugLine="Return";
+ //BA.debugLineNum = 49;BA.debugLine="Return";
 if (true) return ;
  if (true) break;
 ;
-RDebugUtils.currentLine=851975;
- //BA.debugLineNum = 851975;BA.debugLine="If txt_cedula.Text.Length > 13 Then";
+ //BA.debugLineNum = 52;BA.debugLine="If txt_cedula.Text.Length > 13 Then";
 
 case 4:
 //if
@@ -482,16 +448,13 @@ this.state = 6;
 case 6:
 //C
 this.state = 7;
-RDebugUtils.currentLine=851976;
- //BA.debugLineNum = 851976;BA.debugLine="xui.MsgboxAsync(\"La cédula no puede tener más de";
+ //BA.debugLineNum = 53;BA.debugLine="xui.MsgboxAsync(\"La cédula no puede tener más de";
 parent._xui.MsgboxAsync(processBA,BA.ObjectToCharSequence("La cédula no puede tener más de 13 caracteres."),BA.ObjectToCharSequence("Error"));
-RDebugUtils.currentLine=851977;
- //BA.debugLineNum = 851977;BA.debugLine="Return";
+ //BA.debugLineNum = 54;BA.debugLine="Return";
 if (true) return ;
  if (true) break;
 ;
-RDebugUtils.currentLine=851980;
- //BA.debugLineNum = 851980;BA.debugLine="If txt_primer_nombre.Text = \"\" Then";
+ //BA.debugLineNum = 57;BA.debugLine="If txt_primer_nombre.Text = \"\" Then";
 
 case 7:
 //if
@@ -503,16 +466,13 @@ this.state = 9;
 case 9:
 //C
 this.state = 10;
-RDebugUtils.currentLine=851981;
- //BA.debugLineNum = 851981;BA.debugLine="xui.MsgboxAsync(\"El campo 'Primer Nombre' no pue";
+ //BA.debugLineNum = 58;BA.debugLine="xui.MsgboxAsync(\"El campo 'Primer Nombre' no pue";
 parent._xui.MsgboxAsync(processBA,BA.ObjectToCharSequence("El campo 'Primer Nombre' no puede estar vacío."),BA.ObjectToCharSequence("Error"));
-RDebugUtils.currentLine=851982;
- //BA.debugLineNum = 851982;BA.debugLine="Return";
+ //BA.debugLineNum = 59;BA.debugLine="Return";
 if (true) return ;
  if (true) break;
 ;
-RDebugUtils.currentLine=851985;
- //BA.debugLineNum = 851985;BA.debugLine="If txt_segundo_nombre.Text = \"\" Then";
+ //BA.debugLineNum = 62;BA.debugLine="If txt_segundo_nombre.Text = \"\" Then";
 
 case 10:
 //if
@@ -524,16 +484,13 @@ this.state = 12;
 case 12:
 //C
 this.state = 13;
-RDebugUtils.currentLine=851986;
- //BA.debugLineNum = 851986;BA.debugLine="xui.MsgboxAsync(\"El campo 'Segundo Nombre' no pu";
+ //BA.debugLineNum = 63;BA.debugLine="xui.MsgboxAsync(\"El campo 'Segundo Nombre' no pu";
 parent._xui.MsgboxAsync(processBA,BA.ObjectToCharSequence("El campo 'Segundo Nombre' no puede estar vacío."),BA.ObjectToCharSequence("Error"));
-RDebugUtils.currentLine=851987;
- //BA.debugLineNum = 851987;BA.debugLine="Return";
+ //BA.debugLineNum = 64;BA.debugLine="Return";
 if (true) return ;
  if (true) break;
 ;
-RDebugUtils.currentLine=851990;
- //BA.debugLineNum = 851990;BA.debugLine="If txt_primer_apellido.Text = \"\" Then";
+ //BA.debugLineNum = 67;BA.debugLine="If txt_primer_apellido.Text = \"\" Then";
 
 case 13:
 //if
@@ -545,16 +502,13 @@ this.state = 15;
 case 15:
 //C
 this.state = 16;
-RDebugUtils.currentLine=851991;
- //BA.debugLineNum = 851991;BA.debugLine="xui.MsgboxAsync(\"El campo 'Primer Apellido' no p";
+ //BA.debugLineNum = 68;BA.debugLine="xui.MsgboxAsync(\"El campo 'Primer Apellido' no p";
 parent._xui.MsgboxAsync(processBA,BA.ObjectToCharSequence("El campo 'Primer Apellido' no puede estar vacío."),BA.ObjectToCharSequence("Error"));
-RDebugUtils.currentLine=851992;
- //BA.debugLineNum = 851992;BA.debugLine="Return";
+ //BA.debugLineNum = 69;BA.debugLine="Return";
 if (true) return ;
  if (true) break;
 ;
-RDebugUtils.currentLine=851995;
- //BA.debugLineNum = 851995;BA.debugLine="If txt_segundo_apellido.Text = \"\" Then";
+ //BA.debugLineNum = 72;BA.debugLine="If txt_segundo_apellido.Text = \"\" Then";
 
 case 16:
 //if
@@ -566,16 +520,13 @@ this.state = 18;
 case 18:
 //C
 this.state = 19;
-RDebugUtils.currentLine=851996;
- //BA.debugLineNum = 851996;BA.debugLine="xui.MsgboxAsync(\"El campo 'Segundo Apellido' no";
+ //BA.debugLineNum = 73;BA.debugLine="xui.MsgboxAsync(\"El campo 'Segundo Apellido' no";
 parent._xui.MsgboxAsync(processBA,BA.ObjectToCharSequence("El campo 'Segundo Apellido' no puede estar vacío."),BA.ObjectToCharSequence("Error"));
-RDebugUtils.currentLine=851997;
- //BA.debugLineNum = 851997;BA.debugLine="Return";
+ //BA.debugLineNum = 74;BA.debugLine="Return";
 if (true) return ;
  if (true) break;
 ;
-RDebugUtils.currentLine=852000;
- //BA.debugLineNum = 852000;BA.debugLine="If txt_primer_nombre.Text.Length > 100 Then";
+ //BA.debugLineNum = 77;BA.debugLine="If txt_primer_nombre.Text.Length > 100 Then";
 
 case 19:
 //if
@@ -587,16 +538,13 @@ this.state = 21;
 case 21:
 //C
 this.state = 22;
-RDebugUtils.currentLine=852001;
- //BA.debugLineNum = 852001;BA.debugLine="xui.MsgboxAsync(\"El campo 'Primer Nombre' no pue";
+ //BA.debugLineNum = 78;BA.debugLine="xui.MsgboxAsync(\"El campo 'Primer Nombre' no pue";
 parent._xui.MsgboxAsync(processBA,BA.ObjectToCharSequence("El campo 'Primer Nombre' no puede tener más de 100 caracteres."),BA.ObjectToCharSequence("Error"));
-RDebugUtils.currentLine=852002;
- //BA.debugLineNum = 852002;BA.debugLine="Return";
+ //BA.debugLineNum = 79;BA.debugLine="Return";
 if (true) return ;
  if (true) break;
 ;
-RDebugUtils.currentLine=852005;
- //BA.debugLineNum = 852005;BA.debugLine="If txt_segundo_nombre.Text.Length > 100 Then";
+ //BA.debugLineNum = 82;BA.debugLine="If txt_segundo_nombre.Text.Length > 100 Then";
 
 case 22:
 //if
@@ -608,16 +556,13 @@ this.state = 24;
 case 24:
 //C
 this.state = 25;
-RDebugUtils.currentLine=852006;
- //BA.debugLineNum = 852006;BA.debugLine="xui.MsgboxAsync(\"El campo 'Segundo Nombre' no pu";
+ //BA.debugLineNum = 83;BA.debugLine="xui.MsgboxAsync(\"El campo 'Segundo Nombre' no pu";
 parent._xui.MsgboxAsync(processBA,BA.ObjectToCharSequence("El campo 'Segundo Nombre' no puede tener más de 100 caracteres."),BA.ObjectToCharSequence("Error"));
-RDebugUtils.currentLine=852007;
- //BA.debugLineNum = 852007;BA.debugLine="Return";
+ //BA.debugLineNum = 84;BA.debugLine="Return";
 if (true) return ;
  if (true) break;
 ;
-RDebugUtils.currentLine=852010;
- //BA.debugLineNum = 852010;BA.debugLine="If txt_primer_apellido.Text.Length > 100 Then";
+ //BA.debugLineNum = 87;BA.debugLine="If txt_primer_apellido.Text.Length > 100 Then";
 
 case 25:
 //if
@@ -629,16 +574,13 @@ this.state = 27;
 case 27:
 //C
 this.state = 28;
-RDebugUtils.currentLine=852011;
- //BA.debugLineNum = 852011;BA.debugLine="xui.MsgboxAsync(\"El campo 'Primer Apellido' no p";
+ //BA.debugLineNum = 88;BA.debugLine="xui.MsgboxAsync(\"El campo 'Primer Apellido' no p";
 parent._xui.MsgboxAsync(processBA,BA.ObjectToCharSequence("El campo 'Primer Apellido' no puede tener más de 100 caracteres."),BA.ObjectToCharSequence("Error"));
-RDebugUtils.currentLine=852012;
- //BA.debugLineNum = 852012;BA.debugLine="Return";
+ //BA.debugLineNum = 89;BA.debugLine="Return";
 if (true) return ;
  if (true) break;
 ;
-RDebugUtils.currentLine=852015;
- //BA.debugLineNum = 852015;BA.debugLine="If txt_segundo_apellido.Text.Length > 100 Then";
+ //BA.debugLineNum = 92;BA.debugLine="If txt_segundo_apellido.Text.Length > 100 Then";
 
 case 28:
 //if
@@ -650,16 +592,13 @@ this.state = 30;
 case 30:
 //C
 this.state = 31;
-RDebugUtils.currentLine=852016;
- //BA.debugLineNum = 852016;BA.debugLine="xui.MsgboxAsync(\"El campo 'Segundo Apellido' no";
+ //BA.debugLineNum = 93;BA.debugLine="xui.MsgboxAsync(\"El campo 'Segundo Apellido' no";
 parent._xui.MsgboxAsync(processBA,BA.ObjectToCharSequence("El campo 'Segundo Apellido' no puede tener más de 100 caracteres."),BA.ObjectToCharSequence("Error"));
-RDebugUtils.currentLine=852017;
- //BA.debugLineNum = 852017;BA.debugLine="Return";
+ //BA.debugLineNum = 94;BA.debugLine="Return";
 if (true) return ;
  if (true) break;
 ;
-RDebugUtils.currentLine=852020;
- //BA.debugLineNum = 852020;BA.debugLine="If txt_correo.Text = \"\" Then";
+ //BA.debugLineNum = 97;BA.debugLine="If txt_correo.Text = \"\" Then";
 
 case 31:
 //if
@@ -671,16 +610,13 @@ this.state = 33;
 case 33:
 //C
 this.state = 34;
-RDebugUtils.currentLine=852021;
- //BA.debugLineNum = 852021;BA.debugLine="xui.MsgboxAsync(\"El campo 'Correo' no puede esta";
+ //BA.debugLineNum = 98;BA.debugLine="xui.MsgboxAsync(\"El campo 'Correo' no puede esta";
 parent._xui.MsgboxAsync(processBA,BA.ObjectToCharSequence("El campo 'Correo' no puede estar vacío."),BA.ObjectToCharSequence("Error"));
-RDebugUtils.currentLine=852022;
- //BA.debugLineNum = 852022;BA.debugLine="Return";
+ //BA.debugLineNum = 99;BA.debugLine="Return";
 if (true) return ;
  if (true) break;
 ;
-RDebugUtils.currentLine=852025;
- //BA.debugLineNum = 852025;BA.debugLine="If txt_correo.Text.Length > 250 Then";
+ //BA.debugLineNum = 102;BA.debugLine="If txt_correo.Text.Length > 250 Then";
 
 case 34:
 //if
@@ -692,16 +628,13 @@ this.state = 36;
 case 36:
 //C
 this.state = 37;
-RDebugUtils.currentLine=852026;
- //BA.debugLineNum = 852026;BA.debugLine="xui.MsgboxAsync(\"El campo 'Correo/email' no pued";
+ //BA.debugLineNum = 103;BA.debugLine="xui.MsgboxAsync(\"El campo 'Correo/email' no pued";
 parent._xui.MsgboxAsync(processBA,BA.ObjectToCharSequence("El campo 'Correo/email' no puede tener más de 250 caracteres."),BA.ObjectToCharSequence("Error"));
-RDebugUtils.currentLine=852027;
- //BA.debugLineNum = 852027;BA.debugLine="Return";
+ //BA.debugLineNum = 104;BA.debugLine="Return";
 if (true) return ;
  if (true) break;
 ;
-RDebugUtils.currentLine=852030;
- //BA.debugLineNum = 852030;BA.debugLine="If txt_contrasenia.Text = \"\" Then";
+ //BA.debugLineNum = 107;BA.debugLine="If txt_contrasenia.Text = \"\" Then";
 
 case 37:
 //if
@@ -713,16 +646,13 @@ this.state = 39;
 case 39:
 //C
 this.state = 40;
-RDebugUtils.currentLine=852031;
- //BA.debugLineNum = 852031;BA.debugLine="xui.MsgboxAsync(\"El campo 'Contraseña' no puede";
+ //BA.debugLineNum = 108;BA.debugLine="xui.MsgboxAsync(\"El campo 'Contraseña' no puede";
 parent._xui.MsgboxAsync(processBA,BA.ObjectToCharSequence("El campo 'Contraseña' no puede estar vacío."),BA.ObjectToCharSequence("Error"));
-RDebugUtils.currentLine=852032;
- //BA.debugLineNum = 852032;BA.debugLine="Return";
+ //BA.debugLineNum = 109;BA.debugLine="Return";
 if (true) return ;
  if (true) break;
 ;
-RDebugUtils.currentLine=852035;
- //BA.debugLineNum = 852035;BA.debugLine="If txt_contrasenia.Text.Length > 15 Then";
+ //BA.debugLineNum = 112;BA.debugLine="If txt_contrasenia.Text.Length > 15 Then";
 
 case 40:
 //if
@@ -734,16 +664,13 @@ this.state = 42;
 case 42:
 //C
 this.state = 43;
-RDebugUtils.currentLine=852036;
- //BA.debugLineNum = 852036;BA.debugLine="xui.MsgboxAsync(\"¡La contraseña no puede contene";
+ //BA.debugLineNum = 113;BA.debugLine="xui.MsgboxAsync(\"¡La contraseña no puede contene";
 parent._xui.MsgboxAsync(processBA,BA.ObjectToCharSequence("¡La contraseña no puede contener más de 15 caracteres!"),BA.ObjectToCharSequence("Error"));
-RDebugUtils.currentLine=852037;
- //BA.debugLineNum = 852037;BA.debugLine="Return";
+ //BA.debugLineNum = 114;BA.debugLine="Return";
 if (true) return ;
  if (true) break;
 ;
-RDebugUtils.currentLine=852040;
- //BA.debugLineNum = 852040;BA.debugLine="If txt_fecha_nacimiento.Text = \"\" Then";
+ //BA.debugLineNum = 117;BA.debugLine="If txt_fecha_nacimiento.Text = \"\" Then";
 
 case 43:
 //if
@@ -755,11 +682,9 @@ this.state = 45;
 case 45:
 //C
 this.state = 46;
-RDebugUtils.currentLine=852041;
- //BA.debugLineNum = 852041;BA.debugLine="xui.MsgboxAsync(\"El campo 'Fecha de Nacimiento'";
+ //BA.debugLineNum = 118;BA.debugLine="xui.MsgboxAsync(\"El campo 'Fecha de Nacimiento'";
 parent._xui.MsgboxAsync(processBA,BA.ObjectToCharSequence("El campo 'Fecha de Nacimiento' no puede estar vacío."),BA.ObjectToCharSequence("Error"));
-RDebugUtils.currentLine=852042;
- //BA.debugLineNum = 852042;BA.debugLine="Return";
+ //BA.debugLineNum = 119;BA.debugLine="Return";
 if (true) return ;
  if (true) break;
 
@@ -767,108 +692,74 @@ case 46:
 //C
 this.state = 47;
 ;
-RDebugUtils.currentLine=852045;
- //BA.debugLineNum = 852045;BA.debugLine="Dim mapRegister As Map";
+ //BA.debugLineNum = 122;BA.debugLine="Dim mapRegister As Map";
 _mapregister = new anywheresoftware.b4a.objects.collections.Map();
-RDebugUtils.currentLine=852046;
- //BA.debugLineNum = 852046;BA.debugLine="Dim jsonRegister As String";
+ //BA.debugLineNum = 123;BA.debugLine="Dim jsonRegister As String";
 _jsonregister = "";
-RDebugUtils.currentLine=852047;
- //BA.debugLineNum = 852047;BA.debugLine="Dim jsonGenerator As JSONGenerator";
+ //BA.debugLineNum = 124;BA.debugLine="Dim jsonGenerator As JSONGenerator";
 _jsongenerator = new anywheresoftware.b4a.objects.collections.JSONParser.JSONGenerator();
-RDebugUtils.currentLine=852048;
- //BA.debugLineNum = 852048;BA.debugLine="Dim usuario_ As usuario";
+ //BA.debugLineNum = 125;BA.debugLine="Dim usuario_ As usuario";
 _usuario_ = new b4a.example.usuario();
-RDebugUtils.currentLine=852050;
- //BA.debugLineNum = 852050;BA.debugLine="usuario_.usr_cedula = txt_cedula.Text";
+ //BA.debugLineNum = 127;BA.debugLine="usuario_.usr_cedula = txt_cedula.Text";
 _usuario_._usr_cedula /*String*/  = parent.mostCurrent._txt_cedula.getText();
-RDebugUtils.currentLine=852051;
- //BA.debugLineNum = 852051;BA.debugLine="usuario_.usr_primer_nombre = txt_primer_nombre.Te";
+ //BA.debugLineNum = 128;BA.debugLine="usuario_.usr_primer_nombre = txt_primer_nombre.Te";
 _usuario_._usr_primer_nombre /*String*/  = parent.mostCurrent._txt_primer_nombre.getText();
-RDebugUtils.currentLine=852052;
- //BA.debugLineNum = 852052;BA.debugLine="usuario_.usr_segundo_nombre = txt_segundo_nombre.";
+ //BA.debugLineNum = 129;BA.debugLine="usuario_.usr_segundo_nombre = txt_segundo_nombre.";
 _usuario_._usr_segundo_nombre /*String*/  = parent.mostCurrent._txt_segundo_nombre.getText();
-RDebugUtils.currentLine=852053;
- //BA.debugLineNum = 852053;BA.debugLine="usuario_.usr_primer_apellido = txt_primer_apellid";
+ //BA.debugLineNum = 130;BA.debugLine="usuario_.usr_primer_apellido = txt_primer_apellid";
 _usuario_._usr_primer_apellido /*String*/  = parent.mostCurrent._txt_primer_apellido.getText();
-RDebugUtils.currentLine=852054;
- //BA.debugLineNum = 852054;BA.debugLine="usuario_.usr_segundo_apellido = txt_segundo_apell";
+ //BA.debugLineNum = 131;BA.debugLine="usuario_.usr_segundo_apellido = txt_segundo_apell";
 _usuario_._usr_segundo_apellido /*String*/  = parent.mostCurrent._txt_segundo_apellido.getText();
-RDebugUtils.currentLine=852055;
- //BA.debugLineNum = 852055;BA.debugLine="usr_nombre = txt_primer_nombre.Text & \"\" & txt_pr";
+ //BA.debugLineNum = 132;BA.debugLine="usr_nombre = txt_primer_nombre.Text & \"\" & txt_pr";
 parent._usr_nombre = parent.mostCurrent._txt_primer_nombre.getText()+""+parent.mostCurrent._txt_primer_apellido.getText();
-RDebugUtils.currentLine=852056;
- //BA.debugLineNum = 852056;BA.debugLine="usuario_.usr_email = txt_correo.Text";
+ //BA.debugLineNum = 133;BA.debugLine="usuario_.usr_email = txt_correo.Text";
 _usuario_._usr_email /*String*/  = parent.mostCurrent._txt_correo.getText();
-RDebugUtils.currentLine=852057;
- //BA.debugLineNum = 852057;BA.debugLine="usr_email_global = txt_correo.Text";
+ //BA.debugLineNum = 134;BA.debugLine="usr_email_global = txt_correo.Text";
 parent._usr_email_global = parent.mostCurrent._txt_correo.getText();
-RDebugUtils.currentLine=852058;
- //BA.debugLineNum = 852058;BA.debugLine="usuario_.usr_contrasenia = txt_contrasenia.Text";
+ //BA.debugLineNum = 135;BA.debugLine="usuario_.usr_contrasenia = txt_contrasenia.Text";
 _usuario_._usr_contrasenia /*String*/  = parent.mostCurrent._txt_contrasenia.getText();
-RDebugUtils.currentLine=852059;
- //BA.debugLineNum = 852059;BA.debugLine="usuario_.usr_fecha_nacimiento = txt_fecha_nacimie";
+ //BA.debugLineNum = 136;BA.debugLine="usuario_.usr_fecha_nacimiento = txt_fecha_nacimie";
 _usuario_._usr_fecha_nacimiento /*String*/  = parent.mostCurrent._txt_fecha_nacimiento.getText();
-RDebugUtils.currentLine=852060;
- //BA.debugLineNum = 852060;BA.debugLine="usuario_.usr_rol = \"2\"";
+ //BA.debugLineNum = 137;BA.debugLine="usuario_.usr_rol = \"2\"";
 _usuario_._usr_rol /*String*/  = "2";
-RDebugUtils.currentLine=852061;
- //BA.debugLineNum = 852061;BA.debugLine="usuario_.usr_estado = \"H\"";
+ //BA.debugLineNum = 138;BA.debugLine="usuario_.usr_estado = \"H\"";
 _usuario_._usr_estado /*String*/  = "H";
-RDebugUtils.currentLine=852063;
- //BA.debugLineNum = 852063;BA.debugLine="mapRegister.Initialize";
+ //BA.debugLineNum = 140;BA.debugLine="mapRegister.Initialize";
 _mapregister.Initialize();
-RDebugUtils.currentLine=852064;
- //BA.debugLineNum = 852064;BA.debugLine="mapRegister.Put(\"usr_cedula\", usuario_.usr_cedula";
+ //BA.debugLineNum = 141;BA.debugLine="mapRegister.Put(\"usr_cedula\", usuario_.usr_cedula";
 _mapregister.Put((Object)("usr_cedula"),(Object)(_usuario_._usr_cedula /*String*/ ));
-RDebugUtils.currentLine=852065;
- //BA.debugLineNum = 852065;BA.debugLine="mapRegister.Put(\"usr_primer_nombre\", usuario_.usr";
+ //BA.debugLineNum = 142;BA.debugLine="mapRegister.Put(\"usr_primer_nombre\", usuario_.usr";
 _mapregister.Put((Object)("usr_primer_nombre"),(Object)(_usuario_._usr_primer_nombre /*String*/ ));
-RDebugUtils.currentLine=852066;
- //BA.debugLineNum = 852066;BA.debugLine="mapRegister.Put(\"usr_segundo_nombre\", usuario_.us";
+ //BA.debugLineNum = 143;BA.debugLine="mapRegister.Put(\"usr_segundo_nombre\", usuario_.us";
 _mapregister.Put((Object)("usr_segundo_nombre"),(Object)(_usuario_._usr_segundo_nombre /*String*/ ));
-RDebugUtils.currentLine=852067;
- //BA.debugLineNum = 852067;BA.debugLine="mapRegister.Put(\"usr_primer_apellido\", usuario_.u";
+ //BA.debugLineNum = 144;BA.debugLine="mapRegister.Put(\"usr_primer_apellido\", usuario_.u";
 _mapregister.Put((Object)("usr_primer_apellido"),(Object)(_usuario_._usr_primer_apellido /*String*/ ));
-RDebugUtils.currentLine=852068;
- //BA.debugLineNum = 852068;BA.debugLine="mapRegister.Put(\"usr_segundo_apellido\", usuario_.";
+ //BA.debugLineNum = 145;BA.debugLine="mapRegister.Put(\"usr_segundo_apellido\", usuario_.";
 _mapregister.Put((Object)("usr_segundo_apellido"),(Object)(_usuario_._usr_segundo_apellido /*String*/ ));
-RDebugUtils.currentLine=852069;
- //BA.debugLineNum = 852069;BA.debugLine="mapRegister.Put(\"usr_email\", usuario_.usr_email)";
+ //BA.debugLineNum = 146;BA.debugLine="mapRegister.Put(\"usr_email\", usuario_.usr_email)";
 _mapregister.Put((Object)("usr_email"),(Object)(_usuario_._usr_email /*String*/ ));
-RDebugUtils.currentLine=852070;
- //BA.debugLineNum = 852070;BA.debugLine="mapRegister.Put(\"usr_contrasenia\", usuario_.usr_c";
+ //BA.debugLineNum = 147;BA.debugLine="mapRegister.Put(\"usr_contrasenia\", usuario_.usr_c";
 _mapregister.Put((Object)("usr_contrasenia"),(Object)(_usuario_._usr_contrasenia /*String*/ ));
-RDebugUtils.currentLine=852071;
- //BA.debugLineNum = 852071;BA.debugLine="mapRegister.Put(\"usr_fecha_nacimiento\", usuario_.";
+ //BA.debugLineNum = 148;BA.debugLine="mapRegister.Put(\"usr_fecha_nacimiento\", usuario_.";
 _mapregister.Put((Object)("usr_fecha_nacimiento"),(Object)(_usuario_._usr_fecha_nacimiento /*String*/ ));
-RDebugUtils.currentLine=852072;
- //BA.debugLineNum = 852072;BA.debugLine="mapRegister.Put(\"usr_rol\", usuario_.usr_rol)";
+ //BA.debugLineNum = 149;BA.debugLine="mapRegister.Put(\"usr_rol\", usuario_.usr_rol)";
 _mapregister.Put((Object)("usr_rol"),(Object)(_usuario_._usr_rol /*String*/ ));
-RDebugUtils.currentLine=852073;
- //BA.debugLineNum = 852073;BA.debugLine="mapRegister.Put(\"usr_estado\", usuario_.usr_estado";
+ //BA.debugLineNum = 150;BA.debugLine="mapRegister.Put(\"usr_estado\", usuario_.usr_estado";
 _mapregister.Put((Object)("usr_estado"),(Object)(_usuario_._usr_estado /*String*/ ));
-RDebugUtils.currentLine=852075;
- //BA.debugLineNum = 852075;BA.debugLine="jsonGenerator.Initialize(mapRegister)";
+ //BA.debugLineNum = 152;BA.debugLine="jsonGenerator.Initialize(mapRegister)";
 _jsongenerator.Initialize(_mapregister);
-RDebugUtils.currentLine=852076;
- //BA.debugLineNum = 852076;BA.debugLine="jsonRegister = jsonGenerator.ToPrettyString(5)";
+ //BA.debugLineNum = 153;BA.debugLine="jsonRegister = jsonGenerator.ToPrettyString(5)";
 _jsonregister = _jsongenerator.ToPrettyString((int) (5));
-RDebugUtils.currentLine=852078;
- //BA.debugLineNum = 852078;BA.debugLine="Dim peticion As HttpJob";
+ //BA.debugLineNum = 155;BA.debugLine="Dim peticion As HttpJob";
 _peticion = new b4a.example.httpjob();
-RDebugUtils.currentLine=852079;
- //BA.debugLineNum = 852079;BA.debugLine="peticion.Initialize(\"\", Me)";
-_peticion._initialize /*String*/ (null,processBA,"",registrousuario.getObject());
-RDebugUtils.currentLine=852080;
- //BA.debugLineNum = 852080;BA.debugLine="peticion.PostString(\"https://biblioteca-3q4a.onre";
-_peticion._poststring /*String*/ (null,"https://biblioteca-3q4a.onrender.com/api/usuarios",_jsonregister);
-RDebugUtils.currentLine=852081;
- //BA.debugLineNum = 852081;BA.debugLine="peticion.GetRequest.SetContentType(\"application/j";
-_peticion._getrequest /*anywheresoftware.b4h.okhttp.OkHttpClientWrapper.OkHttpRequest*/ (null).SetContentType("application/json");
-RDebugUtils.currentLine=852083;
- //BA.debugLineNum = 852083;BA.debugLine="Wait For (peticion) JobDone (respuesta As HttpJob";
-anywheresoftware.b4a.keywords.Common.WaitFor("jobdone", processBA, new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "registrousuario", "btn_registrar_usuario_click"), (Object)(_peticion));
+ //BA.debugLineNum = 156;BA.debugLine="peticion.Initialize(\"\", Me)";
+_peticion._initialize /*String*/ (processBA,"",registrousuario.getObject());
+ //BA.debugLineNum = 157;BA.debugLine="peticion.PostString(\"https://biblioteca-3q4a.onre";
+_peticion._poststring /*String*/ ("https://biblioteca-3q4a.onrender.com/api/usuarios",_jsonregister);
+ //BA.debugLineNum = 158;BA.debugLine="peticion.GetRequest.SetContentType(\"application/j";
+_peticion._getrequest /*anywheresoftware.b4h.okhttp.OkHttpClientWrapper.OkHttpRequest*/ ().SetContentType("application/json");
+ //BA.debugLineNum = 160;BA.debugLine="Wait For (peticion) JobDone (respuesta As HttpJob";
+anywheresoftware.b4a.keywords.Common.WaitFor("jobdone", processBA, this, (Object)(_peticion));
 this.state = 53;
 return;
 case 53:
@@ -876,8 +767,7 @@ case 53:
 this.state = 47;
 _respuesta = (b4a.example.httpjob) result[0];
 ;
-RDebugUtils.currentLine=852085;
- //BA.debugLineNum = 852085;BA.debugLine="If respuesta.Success Then";
+ //BA.debugLineNum = 162;BA.debugLine="If respuesta.Success Then";
 if (true) break;
 
 case 47:
@@ -892,59 +782,80 @@ this.state = 51;
 case 49:
 //C
 this.state = 52;
-RDebugUtils.currentLine=852087;
- //BA.debugLineNum = 852087;BA.debugLine="txt_cedula.Text = \"\"";
+ //BA.debugLineNum = 164;BA.debugLine="txt_cedula.Text = \"\"";
 parent.mostCurrent._txt_cedula.setText(BA.ObjectToCharSequence(""));
-RDebugUtils.currentLine=852088;
- //BA.debugLineNum = 852088;BA.debugLine="txt_primer_nombre.Text = \"\"";
+ //BA.debugLineNum = 165;BA.debugLine="txt_primer_nombre.Text = \"\"";
 parent.mostCurrent._txt_primer_nombre.setText(BA.ObjectToCharSequence(""));
-RDebugUtils.currentLine=852089;
- //BA.debugLineNum = 852089;BA.debugLine="txt_segundo_nombre.Text = \"\"";
+ //BA.debugLineNum = 166;BA.debugLine="txt_segundo_nombre.Text = \"\"";
 parent.mostCurrent._txt_segundo_nombre.setText(BA.ObjectToCharSequence(""));
-RDebugUtils.currentLine=852090;
- //BA.debugLineNum = 852090;BA.debugLine="txt_primer_apellido.Text = \"\"";
+ //BA.debugLineNum = 167;BA.debugLine="txt_primer_apellido.Text = \"\"";
 parent.mostCurrent._txt_primer_apellido.setText(BA.ObjectToCharSequence(""));
-RDebugUtils.currentLine=852091;
- //BA.debugLineNum = 852091;BA.debugLine="txt_segundo_apellido.Text = \"\"";
+ //BA.debugLineNum = 168;BA.debugLine="txt_segundo_apellido.Text = \"\"";
 parent.mostCurrent._txt_segundo_apellido.setText(BA.ObjectToCharSequence(""));
-RDebugUtils.currentLine=852092;
- //BA.debugLineNum = 852092;BA.debugLine="txt_correo.Text = \"\"";
+ //BA.debugLineNum = 169;BA.debugLine="txt_correo.Text = \"\"";
 parent.mostCurrent._txt_correo.setText(BA.ObjectToCharSequence(""));
-RDebugUtils.currentLine=852093;
- //BA.debugLineNum = 852093;BA.debugLine="txt_contrasenia.Text = \"\"";
+ //BA.debugLineNum = 170;BA.debugLine="txt_contrasenia.Text = \"\"";
 parent.mostCurrent._txt_contrasenia.setText(BA.ObjectToCharSequence(""));
-RDebugUtils.currentLine=852094;
- //BA.debugLineNum = 852094;BA.debugLine="txt_fecha_nacimiento.Text = \"\"";
+ //BA.debugLineNum = 171;BA.debugLine="txt_fecha_nacimiento.Text = \"\"";
 parent.mostCurrent._txt_fecha_nacimiento.setText(BA.ObjectToCharSequence(""));
-RDebugUtils.currentLine=852096;
- //BA.debugLineNum = 852096;BA.debugLine="peticion.Release";
-_peticion._release /*String*/ (null);
-RDebugUtils.currentLine=852097;
- //BA.debugLineNum = 852097;BA.debugLine="StartActivity(\"ValidacionUsuario\")";
+ //BA.debugLineNum = 173;BA.debugLine="peticion.Release";
+_peticion._release /*String*/ ();
+ //BA.debugLineNum = 174;BA.debugLine="StartActivity(\"ValidacionUsuario\")";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)("ValidacionUsuario"));
  if (true) break;
 
 case 51:
 //C
 this.state = 52;
-RDebugUtils.currentLine=852099;
- //BA.debugLineNum = 852099;BA.debugLine="xui.MsgboxAsync(\"¡Registro fallido! \" & respuest";
-parent._xui.MsgboxAsync(processBA,BA.ObjectToCharSequence("¡Registro fallido! "+_respuesta._getstring /*String*/ (null)),BA.ObjectToCharSequence("Error"));
+ //BA.debugLineNum = 176;BA.debugLine="xui.MsgboxAsync(\"¡Registro fallido! \" & respuest";
+parent._xui.MsgboxAsync(processBA,BA.ObjectToCharSequence("¡Registro fallido! "+_respuesta._getstring /*String*/ ()),BA.ObjectToCharSequence("Error"));
  if (true) break;
 
 case 52:
 //C
 this.state = -1;
 ;
-RDebugUtils.currentLine=852101;
- //BA.debugLineNum = 852101;BA.debugLine="peticion.Release";
-_peticion._release /*String*/ (null);
-RDebugUtils.currentLine=852103;
- //BA.debugLineNum = 852103;BA.debugLine="End Sub";
+ //BA.debugLineNum = 178;BA.debugLine="peticion.Release";
+_peticion._release /*String*/ ();
+ //BA.debugLineNum = 180;BA.debugLine="End Sub";
 if (true) break;
 
             }
         }
     }
+}
+public static void  _jobdone(b4a.example.httpjob _respuesta) throws Exception{
+}
+public static String  _globals() throws Exception{
+ //BA.debugLineNum = 14;BA.debugLine="Sub Globals";
+ //BA.debugLineNum = 17;BA.debugLine="Private txt_cedula As EditText";
+mostCurrent._txt_cedula = new anywheresoftware.b4a.objects.EditTextWrapper();
+ //BA.debugLineNum = 18;BA.debugLine="Private txt_primer_nombre As EditText";
+mostCurrent._txt_primer_nombre = new anywheresoftware.b4a.objects.EditTextWrapper();
+ //BA.debugLineNum = 19;BA.debugLine="Private txt_segundo_nombre As EditText";
+mostCurrent._txt_segundo_nombre = new anywheresoftware.b4a.objects.EditTextWrapper();
+ //BA.debugLineNum = 20;BA.debugLine="Private txt_primer_apellido As EditText";
+mostCurrent._txt_primer_apellido = new anywheresoftware.b4a.objects.EditTextWrapper();
+ //BA.debugLineNum = 21;BA.debugLine="Private txt_segundo_apellido As EditText";
+mostCurrent._txt_segundo_apellido = new anywheresoftware.b4a.objects.EditTextWrapper();
+ //BA.debugLineNum = 22;BA.debugLine="Private txt_correo As EditText";
+mostCurrent._txt_correo = new anywheresoftware.b4a.objects.EditTextWrapper();
+ //BA.debugLineNum = 23;BA.debugLine="Private txt_contrasenia As EditText";
+mostCurrent._txt_contrasenia = new anywheresoftware.b4a.objects.EditTextWrapper();
+ //BA.debugLineNum = 24;BA.debugLine="Private txt_fecha_nacimiento As EditText";
+mostCurrent._txt_fecha_nacimiento = new anywheresoftware.b4a.objects.EditTextWrapper();
+ //BA.debugLineNum = 25;BA.debugLine="End Sub";
+return "";
+}
+public static String  _process_globals() throws Exception{
+ //BA.debugLineNum = 6;BA.debugLine="Sub Process_Globals";
+ //BA.debugLineNum = 9;BA.debugLine="Private xui As XUI";
+_xui = new anywheresoftware.b4a.objects.B4XViewWrapper.XUI();
+ //BA.debugLineNum = 10;BA.debugLine="Public usr_email_global As String";
+_usr_email_global = "";
+ //BA.debugLineNum = 11;BA.debugLine="Public usr_nombre As String";
+_usr_nombre = "";
+ //BA.debugLineNum = 12;BA.debugLine="End Sub";
+return "";
 }
 }

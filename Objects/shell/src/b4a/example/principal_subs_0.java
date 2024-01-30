@@ -8,7 +8,7 @@ public class principal_subs_0 {
 
 public static RemoteObject  _activity_create(RemoteObject _firsttime) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Create (principal) ","principal",3,principal.mostCurrent.activityBA,principal.mostCurrent,19);
+		Debug.PushSubsStack("Activity_Create (principal) ","principal",7,principal.mostCurrent.activityBA,principal.mostCurrent,19);
 if (RapidSub.canDelegate("activity_create")) { return b4a.example.principal.remoteMe.runUserSub(false, "principal","activity_create", _firsttime);}
 Debug.locals.put("FirstTime", _firsttime);
  BA.debugLineNum = 19;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
@@ -52,7 +52,7 @@ finally {
 		}}
 public static RemoteObject  _activity_keypress(RemoteObject _keycode) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_KeyPress (principal) ","principal",3,principal.mostCurrent.activityBA,principal.mostCurrent,46);
+		Debug.PushSubsStack("Activity_KeyPress (principal) ","principal",7,principal.mostCurrent.activityBA,principal.mostCurrent,46);
 if (RapidSub.canDelegate("activity_keypress")) { return b4a.example.principal.remoteMe.runUserSub(false, "principal","activity_keypress", _keycode);}
 Debug.locals.put("KeyCode", _keycode);
  BA.debugLineNum = 46;BA.debugLine="Sub Activity_KeyPress (KeyCode As Int) As Boolean";
@@ -97,7 +97,7 @@ finally {
 		}}
 public static RemoteObject  _activity_pause(RemoteObject _userclosed) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Pause (principal) ","principal",3,principal.mostCurrent.activityBA,principal.mostCurrent,41);
+		Debug.PushSubsStack("Activity_Pause (principal) ","principal",7,principal.mostCurrent.activityBA,principal.mostCurrent,41);
 if (RapidSub.canDelegate("activity_pause")) { return b4a.example.principal.remoteMe.runUserSub(false, "principal","activity_pause", _userclosed);}
 Debug.locals.put("UserClosed", _userclosed);
  BA.debugLineNum = 41;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
@@ -114,7 +114,7 @@ finally {
 		}}
 public static RemoteObject  _activity_resume() throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Resume (principal) ","principal",3,principal.mostCurrent.activityBA,principal.mostCurrent,37);
+		Debug.PushSubsStack("Activity_Resume (principal) ","principal",7,principal.mostCurrent.activityBA,principal.mostCurrent,37);
 if (RapidSub.canDelegate("activity_resume")) { return b4a.example.principal.remoteMe.runUserSub(false, "principal","activity_resume");}
  BA.debugLineNum = 37;BA.debugLine="Sub Activity_Resume";
 Debug.ShouldStop(16);
@@ -130,7 +130,7 @@ finally {
 		}}
 public static RemoteObject  _btnshow_click() throws Exception{
 try {
-		Debug.PushSubsStack("btnShow_Click (principal) ","principal",3,principal.mostCurrent.activityBA,principal.mostCurrent,65);
+		Debug.PushSubsStack("btnShow_Click (principal) ","principal",7,principal.mostCurrent.activityBA,principal.mostCurrent,65);
 if (RapidSub.canDelegate("btnshow_click")) { return b4a.example.principal.remoteMe.runUserSub(false, "principal","btnshow_click");}
  BA.debugLineNum = 65;BA.debugLine="Sub btnShow_Click";
 Debug.ShouldStop(1);
@@ -163,7 +163,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _slidemenu_click(RemoteObject _item) throws Exception{
 try {
-		Debug.PushSubsStack("SlideMenu_Click (principal) ","principal",3,principal.mostCurrent.activityBA,principal.mostCurrent,70);
+		Debug.PushSubsStack("SlideMenu_Click (principal) ","principal",7,principal.mostCurrent.activityBA,principal.mostCurrent,70);
 if (RapidSub.canDelegate("slidemenu_click")) { return b4a.example.principal.remoteMe.runUserSub(false, "principal","slidemenu_click", _item);}
 Debug.locals.put("Item", _item);
  BA.debugLineNum = 70;BA.debugLine="Sub SlideMenu_Click(Item As Object)";

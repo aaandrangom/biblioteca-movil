@@ -34,7 +34,7 @@ public class main extends Activity implements B4AActivity{
 		super.onCreate(savedInstanceState);
         mostCurrent = this;
 		if (processBA == null) {
-			processBA = new anywheresoftware.b4a.ShellBA(this.getApplicationContext(), null, null, "b4a.example", "b4a.example.main");
+			processBA = new BA(this.getApplicationContext(), null, null, "b4a.example", "b4a.example.main");
 			processBA.loadHtSubs(this.getClass());
 	        float deviceScale = getApplicationContext().getResources().getDisplayMetrics().density;
 	        BALayout.setDeviceScale(deviceScale);
@@ -335,87 +335,6 @@ public class main extends Activity implements B4AActivity{
             
     }
 
-
-
-public static void initializeProcessGlobals() {
-    
-    if (main.processGlobalsRun == false) {
-	    main.processGlobalsRun = true;
-		try {
-		        b4a.example.dateutils._process_globals();
-		
-        } catch (Exception e) {
-			throw new RuntimeException(e);
-		}
-    }
-}
-public static boolean isAnyActivityVisible() {
-    boolean vis = false;
-vis = vis | (main.mostCurrent != null);
-vis = vis | (registrousuario.mostCurrent != null);
-vis = vis | (validacionusuario.mostCurrent != null);
-vis = vis | (principal.mostCurrent != null);
-return vis;}
-
-private static BA killProgramHelper(BA ba) {
-    if (ba == null)
-        return null;
-    anywheresoftware.b4a.BA.SharedProcessBA sharedProcessBA = ba.sharedProcessBA;
-    if (sharedProcessBA == null || sharedProcessBA.activityBA == null)
-        return null;
-    return sharedProcessBA.activityBA.get();
-}
-public static void killProgram() {
-     {
-            Activity __a = null;
-            if (main.previousOne != null) {
-				__a = main.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(main.mostCurrent == null ? null : main.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
- {
-            Activity __a = null;
-            if (registrousuario.previousOne != null) {
-				__a = registrousuario.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(registrousuario.mostCurrent == null ? null : registrousuario.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
- {
-            Activity __a = null;
-            if (validacionusuario.previousOne != null) {
-				__a = validacionusuario.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(validacionusuario.mostCurrent == null ? null : validacionusuario.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
- {
-            Activity __a = null;
-            if (principal.previousOne != null) {
-				__a = principal.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(principal.mostCurrent == null ? null : principal.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
-BA.applicationContext.stopService(new android.content.Intent(BA.applicationContext, starter.class));
-}
 public anywheresoftware.b4a.keywords.Common __c = null;
 public static anywheresoftware.b4a.objects.B4XViewWrapper.XUI _xui = null;
 public anywheresoftware.b4a.objects.EditTextWrapper _txt_usuario = null;
@@ -426,54 +345,39 @@ public b4a.example.validacionusuario _validacionusuario = null;
 public b4a.example.principal _principal = null;
 public b4a.example.starter _starter = null;
 public b4a.example.httputils2service _httputils2service = null;
+
+public static boolean isAnyActivityVisible() {
+    boolean vis = false;
+vis = vis | (main.mostCurrent != null);
+vis = vis | (registrousuario.mostCurrent != null);
+vis = vis | (validacionusuario.mostCurrent != null);
+vis = vis | (principal.mostCurrent != null);
+return vis;}
 public static String  _activity_create(boolean _firsttime) throws Exception{
-RDebugUtils.currentModule="main";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_create", new Object[] {_firsttime}));}
-RDebugUtils.currentLine=131072;
- //BA.debugLineNum = 131072;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
-RDebugUtils.currentLine=131073;
- //BA.debugLineNum = 131073;BA.debugLine="Activity.LoadLayout(\"Layout\")";
+ //BA.debugLineNum = 27;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
+ //BA.debugLineNum = 28;BA.debugLine="Activity.LoadLayout(\"Layout\")";
 mostCurrent._activity.LoadLayout("Layout",mostCurrent.activityBA);
-RDebugUtils.currentLine=131074;
- //BA.debugLineNum = 131074;BA.debugLine="End Sub";
+ //BA.debugLineNum = 29;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
-RDebugUtils.currentModule="main";
-RDebugUtils.currentLine=262144;
- //BA.debugLineNum = 262144;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
-RDebugUtils.currentLine=262146;
- //BA.debugLineNum = 262146;BA.debugLine="End Sub";
+ //BA.debugLineNum = 35;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+ //BA.debugLineNum = 37;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_resume() throws Exception{
-RDebugUtils.currentModule="main";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_resume", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_resume", null));}
-RDebugUtils.currentLine=196608;
- //BA.debugLineNum = 196608;BA.debugLine="Sub Activity_Resume";
-RDebugUtils.currentLine=196610;
- //BA.debugLineNum = 196610;BA.debugLine="End Sub";
+ //BA.debugLineNum = 31;BA.debugLine="Sub Activity_Resume";
+ //BA.debugLineNum = 33;BA.debugLine="End Sub";
 return "";
 }
 public static String  _btn_registro_click() throws Exception{
-RDebugUtils.currentModule="main";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "btn_registro_click", false))
-	 {return ((String) Debug.delegate(mostCurrent.activityBA, "btn_registro_click", null));}
-RDebugUtils.currentLine=393216;
- //BA.debugLineNum = 393216;BA.debugLine="Private Sub btn_registro_Click";
-RDebugUtils.currentLine=393217;
- //BA.debugLineNum = 393217;BA.debugLine="StartActivity(\"RegistroUsuario\")";
+ //BA.debugLineNum = 101;BA.debugLine="Private Sub btn_registro_Click";
+ //BA.debugLineNum = 102;BA.debugLine="StartActivity(\"RegistroUsuario\")";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)("RegistroUsuario"));
-RDebugUtils.currentLine=393218;
- //BA.debugLineNum = 393218;BA.debugLine="End Sub";
+ //BA.debugLineNum = 103;BA.debugLine="End Sub";
 return "";
 }
 public static void  _btniniciarsesion_click() throws Exception{
-RDebugUtils.currentModule="main";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "btniniciarsesion_click", false))
-	 {Debug.delegate(mostCurrent.activityBA, "btniniciarsesion_click", null); return;}
 ResumableSub_btnIniciarSesion_Click rsub = new ResumableSub_btnIniciarSesion_Click(null);
 rsub.resume(processBA, null);
 }
@@ -495,7 +399,6 @@ int _result = 0;
 
 @Override
 public void resume(BA ba, Object[] result) throws Exception{
-RDebugUtils.currentModule="main";
 
     while (true) {
         switch (state) {
@@ -505,14 +408,11 @@ return;
 case 0:
 //C
 this.state = 1;
-RDebugUtils.currentLine=327681;
- //BA.debugLineNum = 327681;BA.debugLine="Dim usuario_ As String";
+ //BA.debugLineNum = 40;BA.debugLine="Dim usuario_ As String";
 _usuario_ = "";
-RDebugUtils.currentLine=327682;
- //BA.debugLineNum = 327682;BA.debugLine="usuario_ = txt_usuario.Text";
+ //BA.debugLineNum = 41;BA.debugLine="usuario_ = txt_usuario.Text";
 _usuario_ = parent.mostCurrent._txt_usuario.getText();
-RDebugUtils.currentLine=327684;
- //BA.debugLineNum = 327684;BA.debugLine="If usuario_ = \"\" Then";
+ //BA.debugLineNum = 43;BA.debugLine="If usuario_ = \"\" Then";
 if (true) break;
 
 case 1:
@@ -525,16 +425,13 @@ this.state = 3;
 case 3:
 //C
 this.state = 4;
-RDebugUtils.currentLine=327685;
- //BA.debugLineNum = 327685;BA.debugLine="xui.MsgboxAsync(\"¡El usuario no puede estar vací";
+ //BA.debugLineNum = 44;BA.debugLine="xui.MsgboxAsync(\"¡El usuario no puede estar vací";
 parent._xui.MsgboxAsync(processBA,BA.ObjectToCharSequence("¡El usuario no puede estar vacío!"),BA.ObjectToCharSequence("Error"));
-RDebugUtils.currentLine=327686;
- //BA.debugLineNum = 327686;BA.debugLine="Return";
+ //BA.debugLineNum = 45;BA.debugLine="Return";
 if (true) return ;
  if (true) break;
 ;
-RDebugUtils.currentLine=327688;
- //BA.debugLineNum = 327688;BA.debugLine="If usuario_.Length > 20 Then";
+ //BA.debugLineNum = 47;BA.debugLine="If usuario_.Length > 20 Then";
 
 case 4:
 //if
@@ -546,11 +443,9 @@ this.state = 6;
 case 6:
 //C
 this.state = 7;
-RDebugUtils.currentLine=327689;
- //BA.debugLineNum = 327689;BA.debugLine="xui.MsgboxAsync(\"¡El usuario no puede contener m";
+ //BA.debugLineNum = 48;BA.debugLine="xui.MsgboxAsync(\"¡El usuario no puede contener m";
 parent._xui.MsgboxAsync(processBA,BA.ObjectToCharSequence("¡El usuario no puede contener más de 20 caracteres!"),BA.ObjectToCharSequence("Error"));
-RDebugUtils.currentLine=327690;
- //BA.debugLineNum = 327690;BA.debugLine="Return";
+ //BA.debugLineNum = 49;BA.debugLine="Return";
 if (true) return ;
  if (true) break;
 
@@ -558,14 +453,11 @@ case 7:
 //C
 this.state = 8;
 ;
-RDebugUtils.currentLine=327693;
- //BA.debugLineNum = 327693;BA.debugLine="Dim contrasenia As String";
+ //BA.debugLineNum = 52;BA.debugLine="Dim contrasenia As String";
 _contrasenia = "";
-RDebugUtils.currentLine=327694;
- //BA.debugLineNum = 327694;BA.debugLine="contrasenia = txt_contrasenia.Text";
+ //BA.debugLineNum = 53;BA.debugLine="contrasenia = txt_contrasenia.Text";
 _contrasenia = parent.mostCurrent._txt_contrasenia.getText();
-RDebugUtils.currentLine=327696;
- //BA.debugLineNum = 327696;BA.debugLine="If contrasenia = \"\" Then";
+ //BA.debugLineNum = 55;BA.debugLine="If contrasenia = \"\" Then";
 if (true) break;
 
 case 8:
@@ -578,16 +470,13 @@ this.state = 10;
 case 10:
 //C
 this.state = 11;
-RDebugUtils.currentLine=327697;
- //BA.debugLineNum = 327697;BA.debugLine="xui.MsgboxAsync(\"¡La contraseña no puede estar v";
+ //BA.debugLineNum = 56;BA.debugLine="xui.MsgboxAsync(\"¡La contraseña no puede estar v";
 parent._xui.MsgboxAsync(processBA,BA.ObjectToCharSequence("¡La contraseña no puede estar vacía!"),BA.ObjectToCharSequence("Error"));
-RDebugUtils.currentLine=327698;
- //BA.debugLineNum = 327698;BA.debugLine="Return";
+ //BA.debugLineNum = 57;BA.debugLine="Return";
 if (true) return ;
  if (true) break;
 ;
-RDebugUtils.currentLine=327700;
- //BA.debugLineNum = 327700;BA.debugLine="If contrasenia.Length > 15 Then";
+ //BA.debugLineNum = 59;BA.debugLine="If contrasenia.Length > 15 Then";
 
 case 11:
 //if
@@ -599,11 +488,9 @@ this.state = 13;
 case 13:
 //C
 this.state = 14;
-RDebugUtils.currentLine=327701;
- //BA.debugLineNum = 327701;BA.debugLine="xui.MsgboxAsync(\"¡La contraseña no puede contene";
+ //BA.debugLineNum = 60;BA.debugLine="xui.MsgboxAsync(\"¡La contraseña no puede contene";
 parent._xui.MsgboxAsync(processBA,BA.ObjectToCharSequence("¡La contraseña no puede contener más de 15 caracteres!"),BA.ObjectToCharSequence("Error"));
-RDebugUtils.currentLine=327702;
- //BA.debugLineNum = 327702;BA.debugLine="Return";
+ //BA.debugLineNum = 61;BA.debugLine="Return";
 if (true) return ;
  if (true) break;
 
@@ -611,54 +498,38 @@ case 14:
 //C
 this.state = 15;
 ;
-RDebugUtils.currentLine=327705;
- //BA.debugLineNum = 327705;BA.debugLine="Dim mapLogin As Map";
+ //BA.debugLineNum = 64;BA.debugLine="Dim mapLogin As Map";
 _maplogin = new anywheresoftware.b4a.objects.collections.Map();
-RDebugUtils.currentLine=327706;
- //BA.debugLineNum = 327706;BA.debugLine="Dim jsonLogin As String";
+ //BA.debugLineNum = 65;BA.debugLine="Dim jsonLogin As String";
 _jsonlogin = "";
-RDebugUtils.currentLine=327707;
- //BA.debugLineNum = 327707;BA.debugLine="Dim jsonGenerator As JSONGenerator";
+ //BA.debugLineNum = 66;BA.debugLine="Dim jsonGenerator As JSONGenerator";
 _jsongenerator = new anywheresoftware.b4a.objects.collections.JSONParser.JSONGenerator();
-RDebugUtils.currentLine=327708;
- //BA.debugLineNum = 327708;BA.debugLine="Dim login_ As login";
+ //BA.debugLineNum = 67;BA.debugLine="Dim login_ As login";
 _login_ = new b4a.example.login();
-RDebugUtils.currentLine=327710;
- //BA.debugLineNum = 327710;BA.debugLine="login_.usr_nickname = usuario_";
+ //BA.debugLineNum = 69;BA.debugLine="login_.usr_nickname = usuario_";
 _login_._usr_nickname /*String*/  = _usuario_;
-RDebugUtils.currentLine=327711;
- //BA.debugLineNum = 327711;BA.debugLine="login_.usr_contrasenia = contrasenia";
+ //BA.debugLineNum = 70;BA.debugLine="login_.usr_contrasenia = contrasenia";
 _login_._usr_contrasenia /*String*/  = _contrasenia;
-RDebugUtils.currentLine=327713;
- //BA.debugLineNum = 327713;BA.debugLine="mapLogin.Initialize";
+ //BA.debugLineNum = 72;BA.debugLine="mapLogin.Initialize";
 _maplogin.Initialize();
-RDebugUtils.currentLine=327714;
- //BA.debugLineNum = 327714;BA.debugLine="mapLogin.Put(\"usr_nickname\", login_.usr_nickname)";
+ //BA.debugLineNum = 73;BA.debugLine="mapLogin.Put(\"usr_nickname\", login_.usr_nickname)";
 _maplogin.Put((Object)("usr_nickname"),(Object)(_login_._usr_nickname /*String*/ ));
-RDebugUtils.currentLine=327715;
- //BA.debugLineNum = 327715;BA.debugLine="mapLogin.Put(\"usr_contrasenia\", login_.usr_contra";
+ //BA.debugLineNum = 74;BA.debugLine="mapLogin.Put(\"usr_contrasenia\", login_.usr_contra";
 _maplogin.Put((Object)("usr_contrasenia"),(Object)(_login_._usr_contrasenia /*String*/ ));
-RDebugUtils.currentLine=327717;
- //BA.debugLineNum = 327717;BA.debugLine="jsonGenerator.Initialize(mapLogin)";
+ //BA.debugLineNum = 76;BA.debugLine="jsonGenerator.Initialize(mapLogin)";
 _jsongenerator.Initialize(_maplogin);
-RDebugUtils.currentLine=327718;
- //BA.debugLineNum = 327718;BA.debugLine="jsonLogin = jsonGenerator.ToPrettyString(5)";
+ //BA.debugLineNum = 77;BA.debugLine="jsonLogin = jsonGenerator.ToPrettyString(5)";
 _jsonlogin = _jsongenerator.ToPrettyString((int) (5));
-RDebugUtils.currentLine=327720;
- //BA.debugLineNum = 327720;BA.debugLine="Dim peticion As HttpJob";
+ //BA.debugLineNum = 79;BA.debugLine="Dim peticion As HttpJob";
 _peticion = new b4a.example.httpjob();
-RDebugUtils.currentLine=327721;
- //BA.debugLineNum = 327721;BA.debugLine="peticion.Initialize(\"\", Me)";
-_peticion._initialize /*String*/ (null,processBA,"",main.getObject());
-RDebugUtils.currentLine=327722;
- //BA.debugLineNum = 327722;BA.debugLine="peticion.PostString(\"https://biblioteca-3q4a.onre";
-_peticion._poststring /*String*/ (null,"https://biblioteca-3q4a.onrender.com/api/auth/login",_jsonlogin);
-RDebugUtils.currentLine=327723;
- //BA.debugLineNum = 327723;BA.debugLine="peticion.GetRequest.SetContentType(\"application/j";
-_peticion._getrequest /*anywheresoftware.b4h.okhttp.OkHttpClientWrapper.OkHttpRequest*/ (null).SetContentType("application/json");
-RDebugUtils.currentLine=327725;
- //BA.debugLineNum = 327725;BA.debugLine="Wait For (peticion) JobDone (respuesta As HttpJob";
-anywheresoftware.b4a.keywords.Common.WaitFor("jobdone", processBA, new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "main", "btniniciarsesion_click"), (Object)(_peticion));
+ //BA.debugLineNum = 80;BA.debugLine="peticion.Initialize(\"\", Me)";
+_peticion._initialize /*String*/ (processBA,"",main.getObject());
+ //BA.debugLineNum = 81;BA.debugLine="peticion.PostString(\"https://biblioteca-3q4a.onre";
+_peticion._poststring /*String*/ ("https://biblioteca-3q4a.onrender.com/api/auth/login",_jsonlogin);
+ //BA.debugLineNum = 82;BA.debugLine="peticion.GetRequest.SetContentType(\"application/j";
+_peticion._getrequest /*anywheresoftware.b4h.okhttp.OkHttpClientWrapper.OkHttpRequest*/ ().SetContentType("application/json");
+ //BA.debugLineNum = 84;BA.debugLine="Wait For (peticion) JobDone (respuesta As HttpJob";
+anywheresoftware.b4a.keywords.Common.WaitFor("jobdone", processBA, this, (Object)(_peticion));
 this.state = 25;
 return;
 case 25:
@@ -666,8 +537,7 @@ case 25:
 this.state = 15;
 _respuesta = (b4a.example.httpjob) result[0];
 ;
-RDebugUtils.currentLine=327727;
- //BA.debugLineNum = 327727;BA.debugLine="If respuesta.Success Then";
+ //BA.debugLineNum = 86;BA.debugLine="If respuesta.Success Then";
 if (true) break;
 
 case 15:
@@ -682,12 +552,10 @@ this.state = 23;
 case 17:
 //C
 this.state = 18;
-RDebugUtils.currentLine=327728;
- //BA.debugLineNum = 327728;BA.debugLine="Dim mensaje_usuario As Object = xui.Msgbox2Async";
+ //BA.debugLineNum = 87;BA.debugLine="Dim mensaje_usuario As Object = xui.Msgbox2Async";
 _mensaje_usuario = parent._xui.Msgbox2Async(processBA,BA.ObjectToCharSequence("¡Login exitoso!."),BA.ObjectToCharSequence("SUCCESS"),"Aceptar","","",(anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper(), (android.graphics.Bitmap)(anywheresoftware.b4a.keywords.Common.Null)));
-RDebugUtils.currentLine=327729;
- //BA.debugLineNum = 327729;BA.debugLine="Wait For (mensaje_usuario) Msgbox_Result (Result";
-anywheresoftware.b4a.keywords.Common.WaitFor("msgbox_result", processBA, new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "main", "btniniciarsesion_click"), _mensaje_usuario);
+ //BA.debugLineNum = 88;BA.debugLine="Wait For (mensaje_usuario) Msgbox_Result (Result";
+anywheresoftware.b4a.keywords.Common.WaitFor("msgbox_result", processBA, this, _mensaje_usuario);
 this.state = 26;
 return;
 case 26:
@@ -695,8 +563,7 @@ case 26:
 this.state = 18;
 _result = (Integer) result[0];
 ;
-RDebugUtils.currentLine=327730;
- //BA.debugLineNum = 327730;BA.debugLine="If Result = xui.DialogResponse_Positive Then";
+ //BA.debugLineNum = 89;BA.debugLine="If Result = xui.DialogResponse_Positive Then";
 if (true) break;
 
 case 18:
@@ -709,11 +576,9 @@ this.state = 20;
 case 20:
 //C
 this.state = 21;
-RDebugUtils.currentLine=327731;
- //BA.debugLineNum = 327731;BA.debugLine="peticion.Release";
-_peticion._release /*String*/ (null);
-RDebugUtils.currentLine=327732;
- //BA.debugLineNum = 327732;BA.debugLine="StartActivity(\"Principal\")";
+ //BA.debugLineNum = 90;BA.debugLine="peticion.Release";
+_peticion._release /*String*/ ();
+ //BA.debugLineNum = 91;BA.debugLine="StartActivity(\"Principal\")";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)("Principal"));
  if (true) break;
 
@@ -726,8 +591,7 @@ this.state = 24;
 case 23:
 //C
 this.state = 24;
-RDebugUtils.currentLine=327735;
- //BA.debugLineNum = 327735;BA.debugLine="xui.MsgboxAsync(\"¡Login fallido!\", \"ERROR\")";
+ //BA.debugLineNum = 94;BA.debugLine="xui.MsgboxAsync(\"¡Login fallido!\", \"ERROR\")";
 parent._xui.MsgboxAsync(processBA,BA.ObjectToCharSequence("¡Login fallido!"),BA.ObjectToCharSequence("ERROR"));
  if (true) break;
 
@@ -735,15 +599,51 @@ case 24:
 //C
 this.state = -1;
 ;
-RDebugUtils.currentLine=327737;
- //BA.debugLineNum = 327737;BA.debugLine="peticion.Release";
-_peticion._release /*String*/ (null);
-RDebugUtils.currentLine=327739;
- //BA.debugLineNum = 327739;BA.debugLine="End Sub";
+ //BA.debugLineNum = 96;BA.debugLine="peticion.Release";
+_peticion._release /*String*/ ();
+ //BA.debugLineNum = 98;BA.debugLine="End Sub";
 if (true) break;
 
             }
         }
     }
+}
+public static void  _jobdone(b4a.example.httpjob _respuesta) throws Exception{
+}
+public static void  _msgbox_result(int _result) throws Exception{
+}
+public static String  _globals() throws Exception{
+ //BA.debugLineNum = 21;BA.debugLine="Sub Globals";
+ //BA.debugLineNum = 23;BA.debugLine="Private txt_usuario As EditText";
+mostCurrent._txt_usuario = new anywheresoftware.b4a.objects.EditTextWrapper();
+ //BA.debugLineNum = 24;BA.debugLine="Private txt_contrasenia As EditText";
+mostCurrent._txt_contrasenia = new anywheresoftware.b4a.objects.EditTextWrapper();
+ //BA.debugLineNum = 25;BA.debugLine="End Sub";
+return "";
+}
+
+public static void initializeProcessGlobals() {
+    
+    if (main.processGlobalsRun == false) {
+	    main.processGlobalsRun = true;
+		try {
+		        b4a.example.dateutils._process_globals();
+main._process_globals();
+registrousuario._process_globals();
+validacionusuario._process_globals();
+principal._process_globals();
+starter._process_globals();
+httputils2service._process_globals();
+		
+        } catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+    }
+}public static String  _process_globals() throws Exception{
+ //BA.debugLineNum = 15;BA.debugLine="Sub Process_Globals";
+ //BA.debugLineNum = 18;BA.debugLine="Private xui As XUI";
+_xui = new anywheresoftware.b4a.objects.B4XViewWrapper.XUI();
+ //BA.debugLineNum = 19;BA.debugLine="End Sub";
+return "";
 }
 }

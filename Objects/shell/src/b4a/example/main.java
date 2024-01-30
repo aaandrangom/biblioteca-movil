@@ -59,10 +59,10 @@ public static RemoteObject _xui = RemoteObject.declareNull("anywheresoftware.b4a
 public static RemoteObject _txt_usuario = RemoteObject.declareNull("anywheresoftware.b4a.objects.EditTextWrapper");
 public static RemoteObject _txt_contrasenia = RemoteObject.declareNull("anywheresoftware.b4a.objects.EditTextWrapper");
 public static RemoteObject _dateutils = RemoteObject.declareNull("b4a.example.dateutils");
+public static b4a.example.starter _starter = null;
 public static b4a.example.registrousuario _registrousuario = null;
 public static b4a.example.validacionusuario _validacionusuario = null;
 public static b4a.example.principal _principal = null;
-public static b4a.example.starter _starter = null;
 public static b4a.example.httputils2service _httputils2service = null;
   public Object[] GetGlobals() {
 		return new Object[] {"Activity",main.mostCurrent._activity,"DateUtils",main.mostCurrent._dateutils,"HttpUtils2Service",Debug.moduleToString(b4a.example.httputils2service.class),"Principal",Debug.moduleToString(b4a.example.principal.class),"RegistroUsuario",Debug.moduleToString(b4a.example.registrousuario.class),"Starter",Debug.moduleToString(b4a.example.starter.class),"txt_contrasenia",main.mostCurrent._txt_contrasenia,"txt_usuario",main.mostCurrent._txt_usuario,"ValidacionUsuario",Debug.moduleToString(b4a.example.validacionusuario.class),"xui",main._xui};

@@ -52,10 +52,10 @@ public static RemoteObject _tempfolder = RemoteObject.createImmutable("");
 public static RemoteObject _taskcounter = RemoteObject.createImmutable(0);
 public static RemoteObject _dateutils = RemoteObject.declareNull("b4a.example.dateutils");
 public static b4a.example.main _main = null;
+public static b4a.example.starter _starter = null;
 public static b4a.example.registrousuario _registrousuario = null;
 public static b4a.example.validacionusuario _validacionusuario = null;
 public static b4a.example.principal _principal = null;
-public static b4a.example.starter _starter = null;
   public Object[] GetGlobals() {
 		return new Object[] {"DateUtils",httputils2service.mostCurrent._dateutils,"hc",httputils2service._hc,"Main",Debug.moduleToString(b4a.example.main.class),"Principal",Debug.moduleToString(b4a.example.principal.class),"Receiver",httputils2service.mostCurrent._receiver,"RegistroUsuario",Debug.moduleToString(b4a.example.registrousuario.class),"Starter",Debug.moduleToString(b4a.example.starter.class),"taskCounter",httputils2service._taskcounter,"TaskIdToJob",httputils2service._taskidtojob,"TempFolder",httputils2service._tempfolder,"ValidacionUsuario",Debug.moduleToString(b4a.example.validacionusuario.class)};
 }

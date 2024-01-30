@@ -25,6 +25,6 @@ ModuleClosedNodes5=1
 ModuleClosedNodes6=
 ModuleClosedNodes7=
 ModuleClosedNodes8=
-NavigationStack=Principal,Activity_Pause,42,0,Principal,Activity_KeyPress,55,0,Principal,btnShow_Click,62,0,Principal,Activity_Create,23,1,SlideMenu,mListView_ItemClick,103,0,SlideMenu,Show,75,0,SlideMenu,Class_Globals,0,0,SlideMenu,mBackPanel_Touch,99,0,Diseñador Visual,layoutPaginaPrincipal.bal,-100,6,SlideMenu,Initialize,44,6
+NavigationStack=SlideMenu,mBackPanel_Touch,99,0,Diseñador Visual,layoutPaginaPrincipal.bal,-100,6,Main,Process_Globals,17,0,Main,Globals,22,0,SlideMenu,Initialize,44,6,Main,btnIniciarSesion_Click,70,0,ValidacionUsuario,btn_validar_usuario_Click,71,2,ValidacionUsuario,Activity_Create,22,0,Principal,SlideMenu_Click,75,6,Principal,Activity_Create,31,6
 SelectedBuild=0
 VisibleModules=3,8,2,4

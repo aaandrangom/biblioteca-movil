@@ -8,7 +8,7 @@ public class validacionusuario_subs_0 {
 
 public static RemoteObject  _activity_create(RemoteObject _firsttime) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Create (validacionusuario) ","validacionusuario",2,validacionusuario.mostCurrent.activityBA,validacionusuario.mostCurrent,19);
+		Debug.PushSubsStack("Activity_Create (validacionusuario) ","validacionusuario",5,validacionusuario.mostCurrent.activityBA,validacionusuario.mostCurrent,19);
 if (RapidSub.canDelegate("activity_create")) { return b4a.example.validacionusuario.remoteMe.runUserSub(false, "validacionusuario","activity_create", _firsttime);}
 Debug.locals.put("FirstTime", _firsttime);
  BA.debugLineNum = 19;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
@@ -34,7 +34,7 @@ finally {
 		}}
 public static RemoteObject  _activity_pause(RemoteObject _userclosed) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Pause (validacionusuario) ","validacionusuario",2,validacionusuario.mostCurrent.activityBA,validacionusuario.mostCurrent,31);
+		Debug.PushSubsStack("Activity_Pause (validacionusuario) ","validacionusuario",5,validacionusuario.mostCurrent.activityBA,validacionusuario.mostCurrent,31);
 if (RapidSub.canDelegate("activity_pause")) { return b4a.example.validacionusuario.remoteMe.runUserSub(false, "validacionusuario","activity_pause", _userclosed);}
 Debug.locals.put("UserClosed", _userclosed);
  BA.debugLineNum = 31;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
@@ -51,7 +51,7 @@ finally {
 		}}
 public static RemoteObject  _activity_resume() throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Resume (validacionusuario) ","validacionusuario",2,validacionusuario.mostCurrent.activityBA,validacionusuario.mostCurrent,27);
+		Debug.PushSubsStack("Activity_Resume (validacionusuario) ","validacionusuario",5,validacionusuario.mostCurrent.activityBA,validacionusuario.mostCurrent,27);
 if (RapidSub.canDelegate("activity_resume")) { return b4a.example.validacionusuario.remoteMe.runUserSub(false, "validacionusuario","activity_resume");}
  BA.debugLineNum = 27;BA.debugLine="Sub Activity_Resume";
 Debug.ShouldStop(67108864);
@@ -67,7 +67,7 @@ finally {
 		}}
 public static void  _btn_validar_usuario_click() throws Exception{
 try {
-		Debug.PushSubsStack("btn_validar_usuario_Click (validacionusuario) ","validacionusuario",2,validacionusuario.mostCurrent.activityBA,validacionusuario.mostCurrent,36);
+		Debug.PushSubsStack("btn_validar_usuario_Click (validacionusuario) ","validacionusuario",5,validacionusuario.mostCurrent.activityBA,validacionusuario.mostCurrent,36);
 if (RapidSub.canDelegate("btn_validar_usuario_click")) { b4a.example.validacionusuario.remoteMe.runUserSub(false, "validacionusuario","btn_validar_usuario_click"); return;}
 ResumableSub_btn_validar_usuario_Click rsub = new ResumableSub_btn_validar_usuario_Click(null);
 rsub.resume(null, null);
@@ -99,7 +99,7 @@ RemoteObject _result = RemoteObject.createImmutable(0);
 @Override
 public void resume(BA ba, RemoteObject result) throws Exception{
 try {
-		Debug.PushSubsStack("btn_validar_usuario_Click (validacionusuario) ","validacionusuario",2,validacionusuario.mostCurrent.activityBA,validacionusuario.mostCurrent,36);
+		Debug.PushSubsStack("btn_validar_usuario_Click (validacionusuario) ","validacionusuario",5,validacionusuario.mostCurrent.activityBA,validacionusuario.mostCurrent,36);
 Debug.locals = rsLocals;Debug.currentSubFrame.locals = rsLocals;
 
     while (true) {

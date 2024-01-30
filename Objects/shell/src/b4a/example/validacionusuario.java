@@ -60,9 +60,9 @@ public static RemoteObject _txt_codigo_verificacion = RemoteObject.declareNull("
 public static RemoteObject _lbl_nombre_usuario = RemoteObject.declareNull("anywheresoftware.b4a.objects.LabelWrapper");
 public static RemoteObject _dateutils = RemoteObject.declareNull("b4a.example.dateutils");
 public static b4a.example.main _main = null;
+public static b4a.example.starter _starter = null;
 public static b4a.example.registrousuario _registrousuario = null;
 public static b4a.example.principal _principal = null;
-public static b4a.example.starter _starter = null;
 public static b4a.example.httputils2service _httputils2service = null;
   public Object[] GetGlobals() {
 		return new Object[] {"Activity",validacionusuario.mostCurrent._activity,"DateUtils",validacionusuario.mostCurrent._dateutils,"HttpUtils2Service",Debug.moduleToString(b4a.example.httputils2service.class),"lbl_nombre_usuario",validacionusuario.mostCurrent._lbl_nombre_usuario,"Main",Debug.moduleToString(b4a.example.main.class),"Principal",Debug.moduleToString(b4a.example.principal.class),"RegistroUsuario",Debug.moduleToString(b4a.example.registrousuario.class),"Starter",Debug.moduleToString(b4a.example.starter.class),"txt_codigo_verificacion",validacionusuario.mostCurrent._txt_codigo_verificacion,"xui",validacionusuario._xui};

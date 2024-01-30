@@ -10,7 +10,7 @@ public class login extends B4AClass.ImplB4AClass implements BA.SubDelegator{
     private static java.util.HashMap<String, java.lang.reflect.Method> htSubs;
     private void innerInitialize(BA _ba) throws Exception {
         if (ba == null) {
-            ba = new anywheresoftware.b4a.ShellBA(_ba, this, htSubs, "b4a.example.login");
+            ba = new BA(_ba, this, htSubs, "b4a.example.login");
             if (htSubs == null) {
                 ba.loadHtSubs(this.getClass());
                 htSubs = ba.htSubs;
@@ -23,14 +23,7 @@ public class login extends B4AClass.ImplB4AClass implements BA.SubDelegator{
             ba.raiseEvent2(null, true, "class_globals", false);
     }
 
- 
-    public void  innerInitializeHelper(anywheresoftware.b4a.BA _ba) throws Exception{
-        innerInitialize(_ba);
-    }
-    public Object callSub(String sub, Object sender, Object[] args) throws Exception {
-        return BA.SubDelegator.SubNotFound;
-    }
-public anywheresoftware.b4a.keywords.Common __c = null;
+ public anywheresoftware.b4a.keywords.Common __c = null;
 public String _usr_nickname = "";
 public String _usr_contrasenia = "";
 public b4a.example.dateutils _dateutils = null;
@@ -40,31 +33,23 @@ public b4a.example.validacionusuario _validacionusuario = null;
 public b4a.example.principal _principal = null;
 public b4a.example.starter _starter = null;
 public b4a.example.httputils2service _httputils2service = null;
-public String  _class_globals(b4a.example.login __ref) throws Exception{
-__ref = this;
-RDebugUtils.currentModule="login";
-RDebugUtils.currentLine=2490368;
- //BA.debugLineNum = 2490368;BA.debugLine="Sub Class_Globals";
-RDebugUtils.currentLine=2490369;
- //BA.debugLineNum = 2490369;BA.debugLine="Public usr_nickname As String";
+public String  _class_globals() throws Exception{
+ //BA.debugLineNum = 1;BA.debugLine="Sub Class_Globals";
+ //BA.debugLineNum = 2;BA.debugLine="Public usr_nickname As String";
 _usr_nickname = "";
-RDebugUtils.currentLine=2490370;
- //BA.debugLineNum = 2490370;BA.debugLine="Public usr_contrasenia As String";
+ //BA.debugLineNum = 3;BA.debugLine="Public usr_contrasenia As String";
 _usr_contrasenia = "";
-RDebugUtils.currentLine=2490371;
- //BA.debugLineNum = 2490371;BA.debugLine="End Sub";
+ //BA.debugLineNum = 4;BA.debugLine="End Sub";
 return "";
 }
-public String  _initialize(b4a.example.login __ref,anywheresoftware.b4a.BA _ba) throws Exception{
-__ref = this;
+public String  _initialize(anywheresoftware.b4a.BA _ba) throws Exception{
 innerInitialize(_ba);
-RDebugUtils.currentModule="login";
-if (Debug.shouldDelegate(ba, "initialize", false))
-	 {return ((String) Debug.delegate(ba, "initialize", new Object[] {_ba}));}
-RDebugUtils.currentLine=2555904;
- //BA.debugLineNum = 2555904;BA.debugLine="Public Sub Initialize";
-RDebugUtils.currentLine=2555906;
- //BA.debugLineNum = 2555906;BA.debugLine="End Sub";
+ //BA.debugLineNum = 7;BA.debugLine="Public Sub Initialize";
+ //BA.debugLineNum = 9;BA.debugLine="End Sub";
 return "";
+}
+public Object callSub(String sub, Object sender, Object[] args) throws Exception {
+BA.senderHolder.set(sender);
+return BA.SubDelegator.SubNotFound;
 }
 }

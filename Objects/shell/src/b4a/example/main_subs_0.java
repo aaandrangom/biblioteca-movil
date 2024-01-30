@@ -389,20 +389,20 @@ public static void initializeProcessGlobals() {
 	    main.processGlobalsRun = true;
 		try {
 		        main_subs_0._process_globals();
+starter_subs_0._process_globals();
 registrousuario_subs_0._process_globals();
 validacionusuario_subs_0._process_globals();
 principal_subs_0._process_globals();
-starter_subs_0._process_globals();
 httputils2service_subs_0._process_globals();
 main.myClass = BA.getDeviceClass ("b4a.example.main");
+starter.myClass = BA.getDeviceClass ("b4a.example.starter");
+login.myClass = BA.getDeviceClass ("b4a.example.login");
 registrousuario.myClass = BA.getDeviceClass ("b4a.example.registrousuario");
+usuario.myClass = BA.getDeviceClass ("b4a.example.usuario");
 validacionusuario.myClass = BA.getDeviceClass ("b4a.example.validacionusuario");
+validacioncodigousuario.myClass = BA.getDeviceClass ("b4a.example.validacioncodigousuario");
 principal.myClass = BA.getDeviceClass ("b4a.example.principal");
 slidemenu.myClass = BA.getDeviceClass ("b4a.example.slidemenu");
-login.myClass = BA.getDeviceClass ("b4a.example.login");
-starter.myClass = BA.getDeviceClass ("b4a.example.starter");
-usuario.myClass = BA.getDeviceClass ("b4a.example.usuario");
-validacioncodigousuario.myClass = BA.getDeviceClass ("b4a.example.validacioncodigousuario");
 b4xdrawer.myClass = BA.getDeviceClass ("b4a.example.b4xdrawer");
 httputils2service.myClass = BA.getDeviceClass ("b4a.example.httputils2service");
 httpjob.myClass = BA.getDeviceClass ("b4a.example.httpjob");

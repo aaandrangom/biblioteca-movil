@@ -10,7 +10,7 @@ public class usuario extends B4AClass.ImplB4AClass implements BA.SubDelegator{
     private static java.util.HashMap<String, java.lang.reflect.Method> htSubs;
     private void innerInitialize(BA _ba) throws Exception {
         if (ba == null) {
-            ba = new anywheresoftware.b4a.ShellBA(_ba, this, htSubs, "b4a.example.usuario");
+            ba = new BA(_ba, this, htSubs, "b4a.example.usuario");
             if (htSubs == null) {
                 ba.loadHtSubs(this.getClass());
                 htSubs = ba.htSubs;
@@ -23,14 +23,7 @@ public class usuario extends B4AClass.ImplB4AClass implements BA.SubDelegator{
             ba.raiseEvent2(null, true, "class_globals", false);
     }
 
- 
-    public void  innerInitializeHelper(anywheresoftware.b4a.BA _ba) throws Exception{
-        innerInitialize(_ba);
-    }
-    public Object callSub(String sub, Object sender, Object[] args) throws Exception {
-        return BA.SubDelegator.SubNotFound;
-    }
-public anywheresoftware.b4a.keywords.Common __c = null;
+ public anywheresoftware.b4a.keywords.Common __c = null;
 public String _usr_cedula = "";
 public String _usr_primer_nombre = "";
 public String _usr_segundo_nombre = "";
@@ -48,55 +41,39 @@ public b4a.example.validacionusuario _validacionusuario = null;
 public b4a.example.principal _principal = null;
 public b4a.example.starter _starter = null;
 public b4a.example.httputils2service _httputils2service = null;
-public String  _class_globals(b4a.example.usuario __ref) throws Exception{
-__ref = this;
-RDebugUtils.currentModule="usuario";
-RDebugUtils.currentLine=3014656;
- //BA.debugLineNum = 3014656;BA.debugLine="Sub Class_Globals";
-RDebugUtils.currentLine=3014657;
- //BA.debugLineNum = 3014657;BA.debugLine="Public usr_cedula As String";
+public String  _class_globals() throws Exception{
+ //BA.debugLineNum = 1;BA.debugLine="Sub Class_Globals";
+ //BA.debugLineNum = 2;BA.debugLine="Public usr_cedula As String";
 _usr_cedula = "";
-RDebugUtils.currentLine=3014658;
- //BA.debugLineNum = 3014658;BA.debugLine="Public usr_primer_nombre As String";
+ //BA.debugLineNum = 3;BA.debugLine="Public usr_primer_nombre As String";
 _usr_primer_nombre = "";
-RDebugUtils.currentLine=3014659;
- //BA.debugLineNum = 3014659;BA.debugLine="Public usr_segundo_nombre As String";
+ //BA.debugLineNum = 4;BA.debugLine="Public usr_segundo_nombre As String";
 _usr_segundo_nombre = "";
-RDebugUtils.currentLine=3014660;
- //BA.debugLineNum = 3014660;BA.debugLine="Public usr_primer_apellido As String";
+ //BA.debugLineNum = 5;BA.debugLine="Public usr_primer_apellido As String";
 _usr_primer_apellido = "";
-RDebugUtils.currentLine=3014661;
- //BA.debugLineNum = 3014661;BA.debugLine="Public usr_segundo_apellido As String";
+ //BA.debugLineNum = 6;BA.debugLine="Public usr_segundo_apellido As String";
 _usr_segundo_apellido = "";
-RDebugUtils.currentLine=3014662;
- //BA.debugLineNum = 3014662;BA.debugLine="Public usr_email As String";
+ //BA.debugLineNum = 7;BA.debugLine="Public usr_email As String";
 _usr_email = "";
-RDebugUtils.currentLine=3014663;
- //BA.debugLineNum = 3014663;BA.debugLine="Public usr_contrasenia As String";
+ //BA.debugLineNum = 8;BA.debugLine="Public usr_contrasenia As String";
 _usr_contrasenia = "";
-RDebugUtils.currentLine=3014664;
- //BA.debugLineNum = 3014664;BA.debugLine="Public usr_fecha_nacimiento As String";
+ //BA.debugLineNum = 9;BA.debugLine="Public usr_fecha_nacimiento As String";
 _usr_fecha_nacimiento = "";
-RDebugUtils.currentLine=3014665;
- //BA.debugLineNum = 3014665;BA.debugLine="Public usr_rol As String";
+ //BA.debugLineNum = 10;BA.debugLine="Public usr_rol As String";
 _usr_rol = "";
-RDebugUtils.currentLine=3014666;
- //BA.debugLineNum = 3014666;BA.debugLine="Public usr_estado As String";
+ //BA.debugLineNum = 11;BA.debugLine="Public usr_estado As String";
 _usr_estado = "";
-RDebugUtils.currentLine=3014667;
- //BA.debugLineNum = 3014667;BA.debugLine="End Sub";
+ //BA.debugLineNum = 12;BA.debugLine="End Sub";
 return "";
 }
-public String  _initialize(b4a.example.usuario __ref,anywheresoftware.b4a.BA _ba) throws Exception{
-__ref = this;
+public String  _initialize(anywheresoftware.b4a.BA _ba) throws Exception{
 innerInitialize(_ba);
-RDebugUtils.currentModule="usuario";
-if (Debug.shouldDelegate(ba, "initialize", false))
-	 {return ((String) Debug.delegate(ba, "initialize", new Object[] {_ba}));}
-RDebugUtils.currentLine=3080192;
- //BA.debugLineNum = 3080192;BA.debugLine="Public Sub Initialize";
-RDebugUtils.currentLine=3080194;
- //BA.debugLineNum = 3080194;BA.debugLine="End Sub";
+ //BA.debugLineNum = 15;BA.debugLine="Public Sub Initialize";
+ //BA.debugLineNum = 17;BA.debugLine="End Sub";
 return "";
+}
+public Object callSub(String sub, Object sender, Object[] args) throws Exception {
+BA.senderHolder.set(sender);
+return BA.SubDelegator.SubNotFound;
 }
 }

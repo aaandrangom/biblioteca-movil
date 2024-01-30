@@ -68,9 +68,9 @@ public static RemoteObject _txt_contrasenia = RemoteObject.declareNull("anywhere
 public static RemoteObject _txt_fecha_nacimiento = RemoteObject.declareNull("anywheresoftware.b4a.objects.EditTextWrapper");
 public static RemoteObject _dateutils = RemoteObject.declareNull("b4a.example.dateutils");
 public static b4a.example.main _main = null;
+public static b4a.example.starter _starter = null;
 public static b4a.example.validacionusuario _validacionusuario = null;
 public static b4a.example.principal _principal = null;
-public static b4a.example.starter _starter = null;
 public static b4a.example.httputils2service _httputils2service = null;
   public Object[] GetGlobals() {
 		return new Object[] {"Activity",registrousuario.mostCurrent._activity,"DateUtils",registrousuario.mostCurrent._dateutils,"HttpUtils2Service",Debug.moduleToString(b4a.example.httputils2service.class),"Main",Debug.moduleToString(b4a.example.main.class),"Principal",Debug.moduleToString(b4a.example.principal.class),"Starter",Debug.moduleToString(b4a.example.starter.class),"txt_cedula",registrousuario.mostCurrent._txt_cedula,"txt_contrasenia",registrousuario.mostCurrent._txt_contrasenia,"txt_correo",registrousuario.mostCurrent._txt_correo,"txt_fecha_nacimiento",registrousuario.mostCurrent._txt_fecha_nacimiento,"txt_primer_apellido",registrousuario.mostCurrent._txt_primer_apellido,"txt_primer_nombre",registrousuario.mostCurrent._txt_primer_nombre,"txt_segundo_apellido",registrousuario.mostCurrent._txt_segundo_apellido,"txt_segundo_nombre",registrousuario.mostCurrent._txt_segundo_nombre,"usr_email_global",registrousuario._usr_email_global,"usr_nombre",registrousuario._usr_nombre,"ValidacionUsuario",Debug.moduleToString(b4a.example.validacionusuario.class),"xui",registrousuario._xui};

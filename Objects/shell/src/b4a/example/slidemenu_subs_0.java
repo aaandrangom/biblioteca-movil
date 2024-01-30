@@ -8,7 +8,7 @@ public class slidemenu_subs_0 {
 
 public static RemoteObject  _additem(RemoteObject __ref,RemoteObject _text,RemoteObject _image,RemoteObject _returnvalue) throws Exception{
 try {
-		Debug.PushSubsStack("AddItem (slidemenu) ","slidemenu",4,__ref.getField(false, "ba"),__ref,56);
+		Debug.PushSubsStack("AddItem (slidemenu) ","slidemenu",8,__ref.getField(false, "ba"),__ref,56);
 if (RapidSub.canDelegate("additem")) { return __ref.runUserSub(false, "slidemenu","additem", __ref, _text, _image, _returnvalue);}
 RemoteObject _item = RemoteObject.declareNull("b4a.example.slidemenu._actionitem");
 Debug.locals.put("Text", _text);
@@ -75,7 +75,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _hide(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("Hide (slidemenu) ","slidemenu",4,__ref.getField(false, "ba"),__ref,84);
+		Debug.PushSubsStack("Hide (slidemenu) ","slidemenu",8,__ref.getField(false, "ba"),__ref,84);
 if (RapidSub.canDelegate("hide")) { return __ref.runUserSub(false, "slidemenu","hide", __ref);}
  BA.debugLineNum = 84;BA.debugLine="Public Sub Hide";
 Debug.ShouldStop(524288);
@@ -104,7 +104,7 @@ finally {
 		}}
 public static RemoteObject  _initialize(RemoteObject __ref,RemoteObject _ba,RemoteObject _activity,RemoteObject _module,RemoteObject _eventname,RemoteObject _top,RemoteObject _width) throws Exception{
 try {
-		Debug.PushSubsStack("Initialize (slidemenu) ","slidemenu",4,__ref.getField(false, "ba"),__ref,22);
+		Debug.PushSubsStack("Initialize (slidemenu) ","slidemenu",8,__ref.getField(false, "ba"),__ref,22);
 if (RapidSub.canDelegate("initialize")) { return __ref.runUserSub(false, "slidemenu","initialize", __ref, _ba, _activity, _module, _eventname, _top, _width);}
 __ref.runVoidMethodAndSync("innerInitializeHelper", _ba);
 Debug.locals.put("ba", _ba);
@@ -190,7 +190,7 @@ finally {
 		}}
 public static RemoteObject  _isvisible(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("isVisible (slidemenu) ","slidemenu",4,__ref.getField(false, "ba"),__ref,112);
+		Debug.PushSubsStack("isVisible (slidemenu) ","slidemenu",8,__ref.getField(false, "ba"),__ref,112);
 if (RapidSub.canDelegate("isvisible")) { return __ref.runUserSub(false, "slidemenu","isvisible", __ref);}
  BA.debugLineNum = 112;BA.debugLine="Public Sub isVisible As Boolean";
 Debug.ShouldStop(32768);
@@ -209,7 +209,7 @@ finally {
 		}}
 public static RemoteObject  _mbackpanel_touch(RemoteObject __ref,RemoteObject _action,RemoteObject _x,RemoteObject _y) throws Exception{
 try {
-		Debug.PushSubsStack("mBackPanel_Touch (slidemenu) ","slidemenu",4,__ref.getField(false, "ba"),__ref,96);
+		Debug.PushSubsStack("mBackPanel_Touch (slidemenu) ","slidemenu",8,__ref.getField(false, "ba"),__ref,96);
 if (RapidSub.canDelegate("mbackpanel_touch")) { return __ref.runUserSub(false, "slidemenu","mbackpanel_touch", __ref, _action, _x, _y);}
 Debug.locals.put("Action", _action);
 Debug.locals.put("X", _x);
@@ -235,7 +235,7 @@ finally {
 		}}
 public static RemoteObject  _mlistview_itemclick(RemoteObject __ref,RemoteObject _position,RemoteObject _value) throws Exception{
 try {
-		Debug.PushSubsStack("mListView_ItemClick (slidemenu) ","slidemenu",4,__ref.getField(false, "ba"),__ref,102);
+		Debug.PushSubsStack("mListView_ItemClick (slidemenu) ","slidemenu",8,__ref.getField(false, "ba"),__ref,102);
 if (RapidSub.canDelegate("mlistview_itemclick")) { return __ref.runUserSub(false, "slidemenu","mlistview_itemclick", __ref, _position, _value);}
 RemoteObject _subname = RemoteObject.createImmutable("");
 Debug.locals.put("Position", _position);
@@ -270,7 +270,7 @@ finally {
 		}}
 public static RemoteObject  _out_animationend(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("Out_AnimationEnd (slidemenu) ","slidemenu",4,__ref.getField(false, "ba"),__ref,92);
+		Debug.PushSubsStack("Out_AnimationEnd (slidemenu) ","slidemenu",8,__ref.getField(false, "ba"),__ref,92);
 if (RapidSub.canDelegate("out_animationend")) { return __ref.runUserSub(false, "slidemenu","out_animationend", __ref);}
  BA.debugLineNum = 92;BA.debugLine="Private Sub Out_AnimationEnd";
 Debug.ShouldStop(134217728);
@@ -289,7 +289,7 @@ finally {
 		}}
 public static RemoteObject  _show(RemoteObject __ref) throws Exception{
 try {
-		Debug.PushSubsStack("Show (slidemenu) ","slidemenu",4,__ref.getField(false, "ba"),__ref,71);
+		Debug.PushSubsStack("Show (slidemenu) ","slidemenu",8,__ref.getField(false, "ba"),__ref,71);
 if (RapidSub.canDelegate("show")) { return __ref.runUserSub(false, "slidemenu","show", __ref);}
  BA.debugLineNum = 71;BA.debugLine="Public Sub Show";
 Debug.ShouldStop(64);
